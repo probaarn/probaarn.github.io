@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nieuws — Progressief Baarn</title>
+  <meta name="description" content="Lees het laatste nieuws van Progressief Baarn over lokale politiek in Baarn.">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="icon" href="assets/logo.webp">
+</head>
+<body>
+
+<!-- NAVIGATIE -->
+<nav class="navbar">
+  <div class="container nav-binnen">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/logo.webp" alt="Progressief Baarn logo" class="nav-logo-afbeelding">
+      <span class="nav-logo-tekst">
+        <span class="logo-hoofdlijn">Progressief</span>
+        <span class="logo-sublijn">Baarn</span>
+      </span>
+    </a>
+    <button class="nav-knop" aria-label="Menu openen">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="mensen.html">Mensen</a></li>
+      <li><a href="nieuws.html">Nieuws</a></li>
+      <li><a href="dossiers.html">Dossiers</a></li>
+      <li><a href="contact.html" class="nav-actie">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- PAGINA HEADER -->
+<header class="pagina-header">
+  <img src="assets/logo.webp" alt="" class="pagina-header-roos" aria-hidden="true">
+  <div class="container pagina-header-binnen">
+    <p class="sectie-label sectie-label--wit">Actueel</p>
+    <h1>Nieuws</h1>
+    <p>Het laatste nieuws en persberichten van Progressief Baarn over lokale politiek, standpunten en activiteiten.</p>
+  </div>
+</header>
+
+<!-- NIEUWS SECTIE -->
+<section class="sectie">
+  <div class="container">
+
+    <!-- Filter -->
+    <div class="nieuws-filter" role="group" aria-label="Filter op categorie">
+      <button class="filter-knop actief" data-filter="all">Alles</button>
+      <button class="filter-knop" data-filter="klimaat">Klimaat</button>
+      <button class="filter-knop" data-filter="wonen">Wonen</button>
+      <button class="filter-knop" data-filter="zorg">Zorg</button>
+      <button class="filter-knop" data-filter="onderwijs">Onderwijs</button>
+      <button class="filter-knop" data-filter="mobiliteit">Mobiliteit</button>
+      <button class="filter-knop" data-filter="bestuur">Bestuur</button>
+    </div>
+
+    <!-- Nieuws grid -->
+    <div class="nieuws-volledig-rooster">
+
+      <article class="nieuws-kaart" data-categorie="klimaat">
+        <div class="nieuws-kaart-afbeelding" style="background: linear-gradient(135deg, #2B7A00 0%, #3A9600 100%);">🌱</div>
+        <div class="nieuws-kaart-body">
+          <div class="nieuws-meta">
+            <span class="nieuws-tag">Klimaat</span>
+            <span class="nieuws-datum">2 april 2026</span>
+          </div>
+          <h3>Progressief Baarn wil ambitieuzer klimaatplan voor gemeente</h3>
+          <p>Progressief Baarn heeft in de gemeenteraad gepleit voor een versnelling van het gemeentelijk klimaatbeleid. Baarn moet in 2040 klimaatneutraal zijn, niet in 2050. "We hebben geen tijd te verliezen", aldus fractievoorzitter Thomas Bakker.</p>
+          <a href="#" class="nieuws-link">Lees meer →</a>
+        </div>
+      </article>
+
+      <article class="nieuws-kaart" data-categorie="wonen">
+        <div class="nieuws-kaart-afbeelding" style="background: linear-gradient(135deg, #D90014 0%, #FF4455 100%);">🏠</div>
+        <div class="nieuws-kaart-body">
+          <div class="nieuws-meta">
+            <span class="nieuws-tag nieuws-tag--rood">Wonen</span>
+            <span class="nieuws-datum">28 maart 2026</span>
+          </div>
+          <h3>Meer sociale huurwoningen in Baarn-Noord</h3>
+          <p>Na jarenlang lobbyen heeft Progressief Baarn een meerderheid gevonden voor 80 nieuwe sociale huurwoningen in Baarn-Noord. Een historisch besluit voor starters en mensen met een smalle beurs.</p>
+          <a href="#" class="nieuws-link">Lees meer →</a>
+        </div>
+      </article>
+
+      <article class="nieuws-kaart" data-categorie="zorg">
+        <div class="nieuws-kaart-afbeelding" style="background: linear-gradient(135deg, #1A4D7A 0%, #2B7AB0 100%);">❤️</div>
+        <div class="nieuws-kaart-body">
+          <div class="nieuws-meta">
+            <span class="nieuws-tag nieuws-tag--donker">Zorg</span>
+            <span class="nieuws-datum">21 maart 2026</span>
+          </div>
+          <h3>Vragen over bezuinigingen op jeugdzorg in Baarn</h3>
+          <p>De fractie heeft schriftelijke vragen ingediend over de geplande bezuinigingen op jeugdzorg. "Juist de kwetsbare kinderen worden geraakt door dit beleid."</p>
+          <a href="#" class="nieuws-link">Lees meer →</a>
+        </div>
+      </article>
+
+      <article class="nieuws-kaart" data-categorie="mobiliteit">
+        <div class="nieuws-kaart-afbeelding" style="background: linear-gradient(135deg, #4A7A00 0%, #6AAA00 100%);">🚲</div>
+        <div class="nieuws-kaart-body">
+          <div class="nieuws-meta">
+            <span class="nieuws-tag">Mobiliteit</span>
+            <span class="nieuws-datum">14 maart 2026</span>
+          </div>
+          <h3>Nieuw fietspad langs Hoofdstraat goedgekeurd</h3>
+          <p>De gemeenteraad heeft ingestemd met een veilig, vrijliggend fietspad langs de Hoofdstraat — een langgekoesterde wens van Progressief Baarn en vele inwoners.</p>
+          <a href="#" class="nieuws-link">Lees meer →</a>
+        </div>
+      </article>
+
+      <article class="nieuws-kaart" data-categorie="onderwijs">
+        <div class="nieuws-kaart-afbeelding" style="background: linear-gradient(135deg, #7A4A00 0%, #AA7A00 100%);">📚</div>
+        <div class="nieuws-kaart-body">
+          <div class="nieuws-meta">
+            <span class="nieuws-tag" style="background:#AA7A00;">Onderwijs</span>
+            <span class="nieuws-datum">7 maart 2026</span>
+          </div>
+          <h3>Investering in schakelklassen voor nieuwkomers</h3>
+          <p>Progressief Baarn heeft succesvol gepleit voor meer middelen voor schakelklassen, zodat kinderen van nieuwkomers sneller kunnen integreren en mee kunnen doen op school.</p>
+          <a href="#" class="nieuws-link">Lees meer →</a>
+        </div>
+      </article>
+
+      <article class="nieuws-kaart" data-categorie="klimaat">
+        <div class="nieuws-kaart-afbeelding" style="background: linear-gradient(135deg, #006B3C 0%, #00A060 100%);">☀️</div>
+        <div class="nieuws-kaart-body">
+          <div class="nieuws-meta">
+            <span class="nieuws-tag">Klimaat</span>
+            <span class="nieuws-datum">28 februari 2026</span>
+          </div>
+          <h3>Zonnepanelen op gemeentelijke gebouwen: motie aangenomen</h3>
+          <p>Op initiatief van Progressief Baarn worden alle gemeentelijke gebouwen voorzien van zonnepanelen. De opbrengst wordt gebruikt om kwetsbare huishoudens te ondersteunen met energiekosten.</p>
+          <a href="#" class="nieuws-link">Lees meer →</a>
+        </div>
+      </article>
+
+      <article class="nieuws-kaart" data-categorie="bestuur">
+        <div class="nieuws-kaart-afbeelding" style="background: linear-gradient(135deg, #3A3A5C 0%, #5A5A8C 100%);">🏛️</div>
+        <div class="nieuws-kaart-body">
+          <div class="nieuws-meta">
+            <span class="nieuws-tag nieuws-tag--donker">Bestuur</span>
+            <span class="nieuws-datum">20 februari 2026</span>
+          </div>
+          <h3>Progressief Baarn vraagt om meer transparantie in gemeentelijke inkoop</h3>
+          <p>De fractie heeft een motie ingediend voor een jaarlijks transparantieverslag over gemeentelijke aanbestedingen en subsidies. "Belastinggeld verdient verantwoording."</p>
+          <a href="#" class="nieuws-link">Lees meer →</a>
+        </div>
+      </article>
+
+      <article class="nieuws-kaart" data-categorie="wonen">
+        <div class="nieuws-kaart-afbeelding" style="background: linear-gradient(135deg, #B00010 0%, #D90014 100%);">🔑</div>
+        <div class="nieuws-kaart-body">
+          <div class="nieuws-meta">
+            <span class="nieuws-tag nieuws-tag--rood">Wonen</span>
+            <span class="nieuws-datum">12 februari 2026</span>
+          </div>
+          <h3>Anti-speculatiebeding bij gemeentelijke grondverkopen</h3>
+          <p>Progressief Baarn heeft er voor gezorgd dat bij toekomstige grondverkopen door de gemeente een anti-speculatiebeding wordt opgenomen om huizenprijzen beheersbaar te houden.</p>
+          <a href="#" class="nieuws-link">Lees meer →</a>
+        </div>
+      </article>
+
+      <article class="nieuws-kaart" data-categorie="zorg">
+        <div class="nieuws-kaart-afbeelding" style="background: linear-gradient(135deg, #1A4D3A 0%, #2A7A5A 100%);">🤝</div>
+        <div class="nieuws-kaart-body">
+          <div class="nieuws-meta">
+            <span class="nieuws-tag nieuws-tag--donker">Zorg</span>
+            <span class="nieuws-datum">5 februari 2026</span>
+          </div>
+          <h3>Nieuw mantelzorgcafé in Baarn dankzij gemeentelijke subsidie</h3>
+          <p>Dankzij een succesvolle lobby van Progressief Baarn ontvangen mantelzorgers in Baarn extra ondersteuning via een nieuw inloopcentrum in het centrum.</p>
+          <a href="#" class="nieuws-link">Lees meer →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-rooster">
+      <div>
+        <div class="footer-logo-wrap">
+          <img src="assets/logo.webp" alt="Progressief Baarn" class="footer-logo-afb">
+          <span class="footer-logo-tekst nav-logo-tekst">
+            <span class="logo-hoofdlijn">Progressief</span>
+            <span class="logo-sublijn">Baarn</span>
+          </span>
+        </div>
+        <p class="footer-tagline">De lokale samenwerking van PvdA en GroenLinks in de gemeente Baarn.</p>
+        <div class="footer-sociaal">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Twitter">𝕏</a>
+          <a href="#" aria-label="Instagram">▣</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+      <div class="footer-kolom">
+        <h5>Navigatie</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="mensen.html">Mensen</a></li>
+          <li><a href="nieuws.html">Nieuws</a></li>
+          <li><a href="dossiers.html">Dossiers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-kolom">
+        <h5>Categorieën</h5>
+        <ul>
+          <li><a href="#">Klimaat</a></li>
+          <li><a href="#">Wonen</a></li>
+          <li><a href="#">Zorg</a></li>
+          <li><a href="#">Onderwijs</a></li>
+          <li><a href="#">Mobiliteit</a></li>
+          <li><a href="#">Bestuur</a></li>
+        </ul>
+      </div>
+      <div class="footer-kolom">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:info@progressiefbaarn.nl">info@progressiefbaarn.nl</a></li>
+          <li><a href="tel:+31355420000">035 542 0000</a></li>
+          <li><a href="https://www.pvda.nl" target="_blank" rel="noopener">pvda.nl</a></li>
+          <li><a href="https://groenlinks.nl" target="_blank" rel="noopener">groenlinks.nl</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-onderlijn">
+      <span>© 2026 Progressief Baarn — PvdA &amp; GroenLinks</span>
+      <div class="footer-onderlijn-links">
+        <a href="#">Privacybeleid</a>
+        <a href="#">Toegankelijkheid</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>
