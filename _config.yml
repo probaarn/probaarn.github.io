@@ -1,0 +1,30 @@
+title: Progressief Baarn
+description: De lokale samenwerking van PvdA en GroenLinks in de gemeente Baarn
+url: "https://probaarn.github.io"
+baseurl: ""
+
+# Auteur / contact
+email: info@progressiefbaarn.nl
+telefoon: "035 542 0000"
+adres: "Laanstraat 1, 3743 BS Baarn"
+
+# Sociale media (vul in zodra beschikbaar)
+social:
+  twitter: ""
+  facebook: ""
+  instagram: ""
+  linkedin: ""
+
+# Jekyll instellingen
+markdown: kramdown
+permalink: pretty
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Bestandsuitsluiting
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .git

@@ -1,0 +1,60 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer-rooster">
+      <div>
+        <div class="footer-logo-wrap">
+          <img src="{{ '/assets/logo.webp' | relative_url }}" alt="{{ site.title }}" class="footer-logo-afb">
+          <span class="footer-logo-tekst nav-logo-tekst">
+            <span class="logo-hoofdlijn">Progressief</span>
+            <span class="logo-sublijn">Baarn</span>
+          </span>
+        </div>
+        <p class="footer-tagline">De lokale samenwerking van PvdA en GroenLinks in de gemeente Baarn. Samen strijden wij voor een eerlijk, groen en sociaal Baarn.</p>
+        <div class="footer-sociaal">
+          {% if site.social.facebook != "" %}<a href="{{ site.social.facebook }}" aria-label="Facebook" rel="noopener">f</a>{% else %}<a href="#" aria-label="Facebook">f</a>{% endif %}
+          {% if site.social.twitter != "" %}<a href="{{ site.social.twitter }}" aria-label="Twitter" rel="noopener">𝕏</a>{% else %}<a href="#" aria-label="Twitter">𝕏</a>{% endif %}
+          {% if site.social.instagram != "" %}<a href="{{ site.social.instagram }}" aria-label="Instagram" rel="noopener">▣</a>{% else %}<a href="#" aria-label="Instagram">▣</a>{% endif %}
+          {% if site.social.linkedin != "" %}<a href="{{ site.social.linkedin }}" aria-label="LinkedIn" rel="noopener">in</a>{% else %}<a href="#" aria-label="LinkedIn">in</a>{% endif %}
+        </div>
+      </div>
+      <div class="footer-kolom">
+        <h5>Navigatie</h5>
+        <ul>
+          <li><a href="{{ '/' | relative_url }}">Home</a></li>
+          <li><a href="{{ '/mensen' | relative_url }}">Mensen</a></li>
+          <li><a href="{{ '/nieuws' | relative_url }}">Nieuws</a></li>
+          <li><a href="{{ '/dossiers' | relative_url }}">Dossiers</a></li>
+          <li><a href="{{ '/contact' | relative_url }}">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-kolom">
+        <h5>Dossiers</h5>
+        <ul>
+          {% for dossier in site.data.dossiers limit:6 %}
+          <li><a href="{{ '/dossiers' | relative_url }}">{{ dossier.naam }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="footer-kolom">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          <li><a href="tel:{{ site.telefoon | remove: ' ' }}">{{ site.telefoon }}</a></li>
+          <li><span>{{ site.adres }}</span></li>
+          <li><a href="https://www.pvda.nl" target="_blank" rel="noopener">pvda.nl</a></li>
+          <li><a href="https://groenlinks.nl" target="_blank" rel="noopener">groenlinks.nl</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-onderlijn">
+      <span>© {{ 'now' | date: "%Y" }} Progressief Baarn — PvdA &amp; GroenLinks</span>
+      <div class="footer-onderlijn-links">
+        <a href="#">Privacybeleid</a>
+        <a href="#">Toegankelijkheid</a>
+      </div>
+      <div class="footer-merken">
+        <span>PvdA</span> × <span>GroenLinks</span>
+      </div>
+    </div>
+  </div>
+</footer>

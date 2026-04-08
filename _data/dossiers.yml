@@ -1,0 +1,170 @@
+# ────────────────────────────────────────────────
+# DOSSIERS — bewerk dit bestand om dossiers te
+# beheren. De 'id' koppelt personen aan dossiers
+# via mensen.yml.
+# ────────────────────────────────────────────────
+
+- id: klimaat
+  naam: Klimaat & Duurzaamheid
+  icoon: "🌱"
+  kleur: groen
+  omschrijving: >
+    Baarn in 2040 klimaatneutraal. We investeren in zonne-energie,
+    warmtepompen voor huurwoningen, groene daken en klimaatadaptieve
+    inrichting van de openbare ruimte. Een gemeentelijk energiefonds
+    helpt inwoners met verduurzaming — ook als zij weinig geld hebben.
+  uitgebreid: >
+    Klimaatverandering is de grootste uitdaging van onze tijd.
+    Progressief Baarn wil dat Baarn in 2040 klimaatneutraal is —
+    tien jaar eerder dan het landelijke plan. Meer bomen, minder
+    asfalt, meer groen in de wijken en serieuze investeringen in
+    hernieuwbare energie voor alle inwoners.
+  tags:
+    - Energietransitie
+    - Klimaatadaptatie
+    - Biodiversiteit
+    - Duurzame Energie
+
+- id: wonen
+  naam: Betaalbaar Wonen
+  icoon: "🏠"
+  kleur: rood
+  omschrijving: >
+    Meer sociale huurwoningen, woningen voor starters en
+    het tegengaan van speculatie op de woningmarkt.
+    Bij elke nieuwbouw: minimaal 30% sociale huur.
+  uitgebreid: >
+    Wonen is een recht, geen luxe. In Baarn zijn woningen
+    nauwelijks betaalbaar voor starters en mensen met een middeninkomen.
+    We pleiten voor anti-speculatiebedingen bij grondverkopen en
+    betere prestatieafspraken met woningcorporaties.
+  tags:
+    - Sociale Huur
+    - Starterswoningen
+    - Anti-speculatie
+    - Corporaties
+
+- id: zorg
+  naam: Zorg & Welzijn
+  icoon: "❤️"
+  kleur: rood
+  omschrijving: >
+    Goede en toegankelijke zorg voor iedereen. Geen bezuinigingen
+    op jeugdzorg en langdurige zorg. Mantelzorgers verdienen
+    meer ondersteuning en waardering.
+  uitgebreid: >
+    We willen buurtcoaches die mensen proactief opzoeken,
+    meer ontmoetingsplekken voor ouderen en een gemeentelijke
+    bijdrage aan preventieve gezondheidsprojecten. Jeugdzorg
+    snijden raakt de meest kwetsbare kinderen.
+  tags:
+    - Jeugdzorg
+    - Ouderenzorg
+    - Mantelzorg
+    - GGZ
+    - Preventie
+
+- id: onderwijs
+  naam: Onderwijs & Gelijke Kansen
+  icoon: "📚"
+  kleur: groen
+  omschrijving: >
+    Investeren in goed onderwijs en gelijke kansen,
+    zodat elk kind in Baarn kan opbloeien.
+    Armoede mag geen belemmering zijn voor deelname.
+  uitgebreid: >
+    We willen gratis schoolmaaltijden, vergoeding van schoolspullen
+    en een lokaal armoedefonds voor gezinnen. Schakelklassen voor
+    nieuwkomers zorgen dat kinderen snel kunnen meedoen.
+    Gelijke kansen beginnen bij goede voor- en vroegschoolse educatie.
+  tags:
+    - VVE
+    - Gelijke Kansen
+    - Kinderarmoede
+    - Schakelklassen
+
+- id: mobiliteit
+  naam: Mobiliteit & Openbaar Vervoer
+  icoon: "🚲"
+  kleur: groen
+  omschrijving: >
+    Veilige fietspaden, beter OV en minder autoverkeer
+    in de woonwijken van Baarn.
+  uitgebreid: >
+    We pleiten voor een gratis OV-abonnement voor 65-plussers,
+    een gemeentelijk deelfietssysteem en vrijliggende fietspaden
+    langs alle hoofdwegen. Parkeerbeleid moet de fiets en het OV
+    stimuleren, niet de auto.
+  tags:
+    - Fietspaden
+    - Openbaar Vervoer
+    - Deelmobiliteit
+    - Verkeersveiligheid
+
+- id: inclusie
+  naam: Inclusie & Diversiteit
+  icoon: "🌍"
+  kleur: groen
+  omschrijving: >
+    Een Baarn waar iedereen welkom is en gelijk behandeld wordt,
+    ongeacht achtergrond, beperking of identiteit.
+  uitgebreid: >
+    We willen een gemeentelijke diversiteitscommissie, toegankelijkere
+    gemeentelijke gebouwen en activiteiten die mensen uit alle culturen
+    samenbrengen. Discriminatie op de woningmarkt en arbeidsmarkt
+    wordt actief bestreden.
+  tags:
+    - Toegankelijkheid
+    - LGBTQ+
+    - Integratie
+    - Anti-discriminatie
+
+- id: financien
+  naam: Financiën & Eerlijk Bestuur
+  icoon: "📊"
+  kleur: rood
+  omschrijving: >
+    Transparante gemeente­financiën en eerlijk bestuur.
+    Belastinggeld van inwoners verdient volledige verantwoording.
+  uitgebreid: >
+    We pleiten voor een jaarlijks transparantieverslag over
+    aanbestedingen en subsidies. De gemeente moet een eerlijk
+    inkoopbeleid voeren dat lokale ondernemers kansen geeft.
+  tags:
+    - Transparantie
+    - Eerlijk Bestuur
+    - Lokale Economie
+
+- id: ruimtelijke-ordening
+  naam: Ruimtelijke Ordening
+  icoon: "🗺️"
+  kleur: groen
+  omschrijving: >
+    Een groene, goed ingerichte gemeente waar wonen,
+    werken en recreëren samengaan in een leefbare omgeving.
+  uitgebreid: >
+    We werken aan een omgevingsvisie die natuur en groen
+    centraal stelt. Baarn moet zijn groene karakter behouden
+    bij elke nieuwbouwontwikkeling. Meer parken, minder
+    verharding, meer biodiversiteit in de wijken.
+  tags:
+    - Omgevingsvisie
+    - Groen
+    - Natuur
+    - Erfgoed
+
+- id: bestuur
+  naam: Democratie & Bestuur
+  icoon: "🏛️"
+  kleur: rood
+  omschrijving: >
+    Een open en democratisch gemeentebestuur dat inwoners
+    serieus neemt en betrekt bij besluitvorming.
+  uitgebreid: >
+    We willen meer burgerparticipatie, een sterker rekenkameronderzoek
+    en een gemeentelijk ombudsman die laagdrempelig bereikbaar is.
+    Inwoners moeten echte invloed hebben op hun wijk.
+  tags:
+    - Participatie
+    - Transparantie
+    - Rekenkamer

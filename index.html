@@ -1,75 +1,39 @@
-<!DOCTYPE html>
-<html lang="nl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Progressief Baarn — PvdA &amp; GroenLinks</title>
-  <meta name="description" content="Progressief Baarn is de lokale samenwerking van PvdA en GroenLinks in Baarn. Samen strijden wij voor een eerlijk, groen en sociaal Baarn.">
-  <meta property="og:title" content="Progressief Baarn">
-  <meta property="og:description" content="Samen voor een eerlijk, groen en sociaal Baarn.">
-  <link rel="stylesheet" href="assets/style.css">
-  <link rel="icon" href="assets/logo.webp">
-</head>
-<body>
-
-<!-- ════════════════════════════════════════════
-     NAVIGATIE
-     ════════════════════════════════════════════ -->
-<nav class="navbar">
-  <div class="container nav-binnen">
-    <a href="index.html" class="nav-logo">
-      <img src="assets/logo.webp" alt="Progressief Baarn logo" class="nav-logo-afbeelding">
-      <span class="nav-logo-tekst">
-        <span class="logo-hoofdlijn">Progressief</span>
-        <span class="logo-sublijn">Baarn</span>
-      </span>
-    </a>
-    <button class="nav-knop" aria-label="Menu openen" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="mensen.html">Mensen</a></li>
-      <li><a href="nieuws.html">Nieuws</a></li>
-      <li><a href="dossiers.html">Dossiers</a></li>
-      <li><a href="contact.html" class="nav-actie">Contact</a></li>
-    </ul>
-  </div>
-</nav>
+---
+layout: default
+title: Home
+description: Progressief Baarn is de lokale samenwerking van PvdA en GroenLinks. Samen voor een eerlijk, groen en sociaal Baarn.
+---
 
 <!-- ════════════════════════════════════════════
      HERO
      ════════════════════════════════════════════ -->
 <section class="hero">
-  <img src="assets/logo.webp" alt="" class="hero-roos" aria-hidden="true">
-  <div class="container">
-    <div class="hero-inhoud">
-      <p class="hero-boven">PvdA &amp; GroenLinks Baarn · Samen vooruit</p>
-      <h1>Voor een <span class="accent">rechtvaardig</span> en groen Baarn</h1>
-      <p class="hero-ondertitel">Progressief Baarn is de lokale samenwerking van PvdA en GroenLinks. Wij strijden voor betaalbaar wonen, een duurzame toekomst, goede zorg en gelijke kansen voor iedereen in Baarn, Lage Vuursche en Eembrugge.</p>
-      <div class="hero-acties">
-        <a href="nieuws.html" class="knop knop-omlijnd-wit">Lees ons nieuws</a>
-        <a href="dossiers.html" class="knop" style="background:rgba(255,255,255,0.12);color:white;border-color:rgba(255,255,255,0.3);">Onze standpunten →</a>
+  <div class="hero-inhoud">
+    <p class="hero-boven">PvdA &amp; GroenLinks Baarn · Samen vooruit</p>
+    <h1>Voor een <span class="accent-rood">rechtvaardig</span> en <span class="accent-groen">groen</span> Baarn</h1>
+    <p class="hero-ondertitel">Progressief Baarn vertegenwoordigt de progressieve stem in de gemeenteraad van Baarn. Wij strijden voor betaalbaar wonen, een duurzame toekomst, goede zorg en gelijke kansen voor iedereen.</p>
+    <div class="hero-acties">
+      <a href="{{ '/nieuws' | relative_url }}" class="knop knop-primair">Lees ons nieuws →</a>
+      <a href="{{ '/dossiers' | relative_url }}" class="knop knop-omlijnd">Onze standpunten</a>
+    </div>
+    <div class="hero-statistieken">
+      <div class="hero-stat">
+        <span class="hero-stat-getal" data-teller="{{ site.data.mensen.raadsleden | size }}">{{ site.data.mensen.raadsleden | size }}</span>
+        <span class="hero-stat-label">Raadsleden</span>
       </div>
-      <div class="hero-statistieken">
-        <div class="hero-stat">
-          <span class="hero-stat-getal" data-teller="4">4</span>
-          <span class="hero-stat-label">Raadsleden</span>
-        </div>
-        <div class="hero-stat">
-          <span class="hero-stat-getal" data-teller="1">1</span>
-          <span class="hero-stat-label">Wethouder</span>
-        </div>
-        <div class="hero-stat">
-          <span class="hero-stat-getal" data-teller="6">6</span>
-          <span class="hero-stat-label">Dossiers</span>
-        </div>
+      <div class="hero-stat">
+        <span class="hero-stat-getal" data-teller="{{ site.data.mensen.wethouder | size }}">{{ site.data.mensen.wethouder | size }}</span>
+        <span class="hero-stat-label">Wethouder</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-getal" data-teller="{{ site.data.dossiers | size }}">{{ site.data.dossiers | size }}</span>
+        <span class="hero-stat-label">Dossiers</span>
       </div>
     </div>
   </div>
-  <div class="hero-scroll">
-    <div class="hero-scroll-lijn"></div>
-    <span>Scroll</span>
+  <div class="hero-visual">
+    <div class="hero-visual-decoratie"></div>
+    <img src="{{ '/assets/logo.webp' | relative_url }}" alt="Progressief Baarn" class="hero-logo-groot">
   </div>
 </section>
 
@@ -83,27 +47,27 @@
         <p class="sectie-label">Wie zijn wij</p>
         <h2>Progressief, eerlijk en groen</h2>
         <p>Progressief Baarn is de lokale politieke samenwerking van de Partij van de Arbeid (PvdA) en GroenLinks in de gemeente Baarn. Samen vertegenwoordigen wij de progressieve stem in de gemeenteraad.</p>
-        <p>Wij geloven in een samenleving waarin iedereen mee kan doen, ongeacht achtergrond of portemonnee. Duurzaamheid en sociale rechtvaardigheid zijn voor ons onlosmakelijk verbonden: een groene toekomst is ook een rechtvaardige toekomst.</p>
+        <p>Wij geloven in een samenleving waarin iedereen mee kan doen, ongeacht achtergrond of portemonnee. Duurzaamheid en sociale rechtvaardigheid zijn voor ons onlosmakelijk verbonden.</p>
         <p>Met onze raadsleden en wethouder zetten wij ons dagelijks in voor betaalbare woningen, schone energie, goede zorg en een leefbaar Baarn voor toekomstige generaties.</p>
-        <a href="mensen.html" class="knop knop-primair">Ons team →</a>
+        <a href="{{ '/mensen' | relative_url }}" class="knop knop-primair">Ons team →</a>
       </div>
       <div class="over-ons-visueel">
         <div class="stat-kaarten">
           <div class="stat-kaart">
-            <span class="stat-getal" data-teller="2022">2022</span>
-            <span class="stat-label">Opgericht</span>
+            <span class="stat-getal">{{ site.data.mensen.raadsleden | size }}</span>
+            <span class="stat-label">Raadsleden</span>
           </div>
           <div class="stat-kaart">
-            <span class="stat-getal" data-teller="18">18%</span>
-            <span class="stat-label">Stemmen 2022</span>
+            <span class="stat-getal">{{ site.data.mensen.wethouder | size }}</span>
+            <span class="stat-label">Wethouder(s)</span>
           </div>
           <div class="stat-kaart">
             <span class="stat-getal">2</span>
             <span class="stat-label">Partijen samen</span>
           </div>
           <div class="stat-kaart">
-            <span class="stat-getal">∞</span>
-            <span class="stat-label">Inzet voor Baarn</span>
+            <span class="stat-getal">{{ site.data.dossiers | size }}</span>
+            <span class="stat-label">Dossiers</span>
           </div>
         </div>
       </div>
@@ -117,52 +81,43 @@
 <section class="sectie nieuws-preview">
   <div class="container">
     <div class="sectie-kop">
-      <div class="sectie-kop-tekst">
-        <p class="sectie-label">Actueel</p>
+      <div>
+        <p class="sectie-label sectie-label--rood">Actueel</p>
         <h2>Laatste nieuws</h2>
       </div>
-      <a href="nieuws.html" class="knop knop-omlijnd">Alle berichten →</a>
+      <a href="{{ '/nieuws' | relative_url }}" class="knop knop-omlijnd">Alle berichten →</a>
     </div>
     <div class="nieuws-rooster">
-      <!-- Uitgelicht artikel -->
+      {% assign uitgelicht = site.data.nieuws | where: "uitgelicht", true | first %}
+      {% if uitgelicht %}
       <article class="nieuws-kaart nieuws-kaart--uitgelicht">
-        <div class="nieuws-kaart-afbeelding" style="background: linear-gradient(135deg, #2B7A00 0%, #3A9600 100%);">🌱</div>
+        <div class="nieuws-kaart-afbeelding" style="background: linear-gradient(135deg, var(--groen-bg) 0%, var(--groen-kaart) 100%);">{{ uitgelicht.icoon }}</div>
         <div class="nieuws-kaart-body">
           <div class="nieuws-meta">
-            <span class="nieuws-tag">Klimaat</span>
-            <span class="nieuws-datum">2 april 2026</span>
+            <span class="nieuws-tag nieuws-tag--{{ uitgelicht.kleur }}">{{ uitgelicht.categorie | capitalize }}</span>
+            <span class="nieuws-datum">{{ uitgelicht.datum | date: "%-d %B %Y" }}</span>
           </div>
-          <h3>Progressief Baarn wil ambitieuzer klimaatplan voor gemeente</h3>
-          <p>Progressief Baarn heeft in de gemeenteraad gepleit voor een versnelling van het gemeentelijk klimaatbeleid. Baarn moet in 2040 klimaatneutraal zijn, niet in 2050 zoals het college voorstelt. "We hebben geen tijd te verliezen", aldus fractievoorzitter Anna de Vries.</p>
-          <a href="nieuws.html" class="nieuws-link">Lees meer →</a>
+          <h3>{{ uitgelicht.titel }}</h3>
+          <p>{{ uitgelicht.intro }}</p>
+          <a href="{{ uitgelicht.url }}" class="nieuws-link">Lees meer →</a>
         </div>
       </article>
-      <!-- Artikel 2 -->
+      {% endif %}
+      {% assign overig = site.data.nieuws | where: "uitgelicht", false | limit: 2 %}
+      {% for artikel in overig %}
       <article class="nieuws-kaart">
-        <div class="nieuws-kaart-afbeelding" style="background: linear-gradient(135deg, #D90014 0%, #FF4455 100%);">🏠</div>
+        <div class="nieuws-kaart-afbeelding" style="background: linear-gradient(135deg, var(--roze-bg) 0%, var(--roze-kaart) 100%);">{{ artikel.icoon }}</div>
         <div class="nieuws-kaart-body">
           <div class="nieuws-meta">
-            <span class="nieuws-tag nieuws-tag--rood">Wonen</span>
-            <span class="nieuws-datum">28 maart 2026</span>
+            <span class="nieuws-tag nieuws-tag--{{ artikel.kleur }}">{{ artikel.categorie | capitalize }}</span>
+            <span class="nieuws-datum">{{ artikel.datum | date: "%-d %B %Y" }}</span>
           </div>
-          <h3>Meer sociale huurwoningen in Baarn-Noord</h3>
-          <p>Na jarenlang lobbyen heeft Progressief Baarn een meerderheid gevonden voor 80 nieuwe sociale huurwoningen in Baarn-Noord.</p>
-          <a href="nieuws.html" class="nieuws-link">Lees meer →</a>
+          <h3>{{ artikel.titel }}</h3>
+          <p>{{ artikel.intro | truncatewords: 25 }}</p>
+          <a href="{{ artikel.url }}" class="nieuws-link">Lees meer →</a>
         </div>
       </article>
-      <!-- Artikel 3 -->
-      <article class="nieuws-kaart">
-        <div class="nieuws-kaart-afbeelding" style="background: linear-gradient(135deg, #1A4D7A 0%, #2B7AB0 100%);">🤝</div>
-        <div class="nieuws-kaart-body">
-          <div class="nieuws-meta">
-            <span class="nieuws-tag nieuws-tag--donker">Zorg</span>
-            <span class="nieuws-datum">21 maart 2026</span>
-          </div>
-          <h3>Vragen over bezuinigingen op jeugdzorg in Baarn</h3>
-          <p>De fractie heeft schriftelijke vragen ingediend over de geplande bezuinigingen op jeugdzorg. "Juist de kwetsbare kinderen worden geraakt."</p>
-          <a href="nieuws.html" class="nieuws-link">Lees meer →</a>
-        </div>
-      </article>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -173,45 +128,44 @@
 <section class="sectie mensen-preview">
   <div class="container">
     <div class="sectie-kop">
-      <div class="sectie-kop-tekst">
+      <div>
         <p class="sectie-label">Ons team</p>
         <h2>Mensen die zich inzetten</h2>
       </div>
-      <a href="mensen.html" class="knop knop-omlijnd">Alle leden →</a>
+      <a href="{{ '/mensen' | relative_url }}" class="knop knop-omlijnd">Alle leden →</a>
     </div>
     <div class="persoon-rooster">
+      {% assign wethouder = site.data.mensen.wethouder | first %}
+      {% if wethouder %}
       <div class="persoon-kaart">
-        <div class="persoon-foto-placeholder" style="background: linear-gradient(160deg, #FFE8EF 0%, #FFB8CC 100%);">👩</div>
+        <div class="persoon-foto-placeholder" style="background: linear-gradient(160deg, var(--roze-bg) 0%, var(--roze-kaart) 100%);">👩</div>
         <div class="persoon-info">
-          <p class="persoon-rol persoon-rol--wethouder">Wethouder</p>
-          <p class="persoon-naam">Anna de Vries</p>
-          <p class="persoon-focus">Klimaat, Duurzaamheid &amp; Volkshuisvesting</p>
+          <p class="persoon-rol persoon-rol--wethouder">{{ wethouder.functie }}</p>
+          <p class="persoon-naam">{{ wethouder.naam }}</p>
+          <p class="persoon-focus">
+            {% for id in wethouder.portefeuilles limit:2 %}
+              {% assign dossier = site.data.dossiers | where: "id", id | first %}
+              {% if dossier %}{{ dossier.naam }}{% unless forloop.last %} &amp; {% endunless %}{% endif %}
+            {% endfor %}
+          </p>
         </div>
       </div>
+      {% endif %}
+      {% for persoon in site.data.mensen.raadsleden limit:3 %}
       <div class="persoon-kaart">
-        <div class="persoon-foto-placeholder" style="background: linear-gradient(160deg, #E6F5D8 0%, #B8E090 100%);">👨</div>
+        <div class="persoon-foto-placeholder" style="background: linear-gradient(160deg, var(--groen-bg) 0%, var(--groen-kaart) 100%);">{% cycle '👨', '👩', '👨', '👩' %}</div>
         <div class="persoon-info">
-          <p class="persoon-rol">Fractievoorzitter</p>
-          <p class="persoon-naam">Thomas Bakker</p>
-          <p class="persoon-focus">Financiën &amp; Bestuur</p>
+          <p class="persoon-rol">{{ persoon.functie }}</p>
+          <p class="persoon-naam">{{ persoon.naam }}</p>
+          <p class="persoon-focus">
+            {% for id in persoon.portefeuilles limit:2 %}
+              {% assign dossier = site.data.dossiers | where: "id", id | first %}
+              {% if dossier %}{{ dossier.naam }}{% unless forloop.last %} &amp; {% endunless %}{% endif %}
+            {% endfor %}
+          </p>
         </div>
       </div>
-      <div class="persoon-kaart">
-        <div class="persoon-foto-placeholder" style="background: linear-gradient(160deg, #FFE8EF 0%, #FFD0B8 100%);">👩</div>
-        <div class="persoon-info">
-          <p class="persoon-rol">Raadslid</p>
-          <p class="persoon-naam">Sara Jansen</p>
-          <p class="persoon-focus">Onderwijs &amp; Jeugd</p>
-        </div>
-      </div>
-      <div class="persoon-kaart">
-        <div class="persoon-foto-placeholder" style="background: linear-gradient(160deg, #E6F5D8 0%, #C8D8F5 100%);">👨</div>
-        <div class="persoon-info">
-          <p class="persoon-rol">Raadslid</p>
-          <p class="persoon-naam">Pieter van Dam</p>
-          <p class="persoon-focus">Zorg &amp; Welzijn</p>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -222,49 +176,21 @@
 <section class="sectie dossiers-preview">
   <div class="container">
     <div class="sectie-kop">
-      <div class="sectie-kop-tekst">
-        <p class="sectie-label">Onze standpunten</p>
+      <div>
+        <p class="sectie-label sectie-label--donker">Onze standpunten</p>
         <h2>Dossiers</h2>
       </div>
-      <a href="dossiers.html" class="knop knop-omlijnd">Alle dossiers →</a>
+      <a href="{{ '/dossiers' | relative_url }}" class="knop knop-omlijnd">Alle dossiers →</a>
     </div>
     <div class="dossier-rooster">
-      <a href="dossiers.html" class="dossier-kaart">
-        <div class="dossier-icoon">🌱</div>
-        <p class="dossier-titel">Klimaat &amp; Duurzaamheid</p>
-        <p class="dossier-omschrijving">Baarn in 2040 klimaatneutraal. Meer zonnepanelen, betere isolatie en schone mobiliteit voor alle inwoners.</p>
+      {% for dossier in site.data.dossiers limit:6 %}
+      <a href="{{ '/dossiers' | relative_url }}" class="dossier-kaart {% if dossier.kleur == 'rood' %}dossier-kaart--rood{% endif %}">
+        <div class="dossier-icoon">{{ dossier.icoon }}</div>
+        <p class="dossier-titel">{{ dossier.naam }}</p>
+        <p class="dossier-omschrijving">{{ dossier.omschrijving | truncatewords: 22 }}</p>
         <span class="dossier-link">Lees meer →</span>
       </a>
-      <a href="dossiers.html" class="dossier-kaart">
-        <div class="dossier-icoon">🏠</div>
-        <p class="dossier-titel">Betaalbaar Wonen</p>
-        <p class="dossier-omschrijving">Meer sociale huurwoningen, woningen voor starters en het tegengaan van speculatie op de woningmarkt.</p>
-        <span class="dossier-link">Lees meer →</span>
-      </a>
-      <a href="dossiers.html" class="dossier-kaart">
-        <div class="dossier-icoon">❤️</div>
-        <p class="dossier-titel">Zorg &amp; Welzijn</p>
-        <p class="dossier-omschrijving">Goede en toegankelijke zorg voor iedereen. Geen bezuinigingen op jeugdzorg en langdurige zorg.</p>
-        <span class="dossier-link">Lees meer →</span>
-      </a>
-      <a href="dossiers.html" class="dossier-kaart">
-        <div class="dossier-icoon">📚</div>
-        <p class="dossier-titel">Onderwijs &amp; Kansen</p>
-        <p class="dossier-omschrijving">Investeren in goed onderwijs en gelijke kansen, zodat elk kind in Baarn kan opbloeien.</p>
-        <span class="dossier-link">Lees meer →</span>
-      </a>
-      <a href="dossiers.html" class="dossier-kaart">
-        <div class="dossier-icoon">🚲</div>
-        <p class="dossier-titel">Mobiliteit &amp; Openbaar Vervoer</p>
-        <p class="dossier-omschrijving">Veilige fietspaden, beter OV en minder autoverkeer in de woonwijken van Baarn.</p>
-        <span class="dossier-link">Lees meer →</span>
-      </a>
-      <a href="dossiers.html" class="dossier-kaart">
-        <div class="dossier-icoon">🌍</div>
-        <p class="dossier-titel">Inclusie &amp; Diversiteit</p>
-        <p class="dossier-omschrijving">Een Baarn waar iedereen welkom is en gelijk behandeld wordt, ongeacht achtergrond of afkomst.</p>
-        <span class="dossier-link">Lees meer →</span>
-      </a>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -279,81 +205,10 @@
       <h2>Word lid of meld je aan als vrijwilliger</h2>
       <p>Wil jij ook bijdragen aan een rechtvaardig en groen Baarn? Word lid van PvdA of GroenLinks, of meld je aan als vrijwilliger voor Progressief Baarn.</p>
       <div class="cta-acties">
-        <a href="contact.html" class="knop knop-primair">Neem contact op</a>
+        <a href="{{ '/contact' | relative_url }}" class="knop knop-primair">Neem contact op</a>
         <a href="https://www.pvda.nl/word-lid/" target="_blank" rel="noopener" class="knop knop-omlijnd-wit">Word PvdA-lid</a>
         <a href="https://groenlinks.nl/lid-worden" target="_blank" rel="noopener" class="knop knop-omlijnd-wit">Word GL-lid</a>
       </div>
     </div>
   </div>
 </section>
-
-<!-- ════════════════════════════════════════════
-     FOOTER
-     ════════════════════════════════════════════ -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-rooster">
-      <div>
-        <div class="footer-logo-wrap">
-          <img src="assets/logo.webp" alt="Progressief Baarn" class="footer-logo-afb">
-          <span class="footer-logo-tekst nav-logo-tekst">
-            <span class="logo-hoofdlijn">Progressief</span>
-            <span class="logo-sublijn">Baarn</span>
-          </span>
-        </div>
-        <p class="footer-tagline">De lokale samenwerking van PvdA en GroenLinks in de gemeente Baarn. Samen strijden wij voor een eerlijk, groen en sociaal Baarn.</p>
-        <div class="footer-sociaal">
-          <a href="#" aria-label="Facebook" title="Facebook">f</a>
-          <a href="#" aria-label="Twitter/X" title="Twitter">𝕏</a>
-          <a href="#" aria-label="Instagram" title="Instagram">▣</a>
-          <a href="#" aria-label="LinkedIn" title="LinkedIn">in</a>
-        </div>
-      </div>
-      <div class="footer-kolom">
-        <h5>Navigatie</h5>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="mensen.html">Mensen</a></li>
-          <li><a href="nieuws.html">Nieuws</a></li>
-          <li><a href="dossiers.html">Dossiers</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-kolom">
-        <h5>Dossiers</h5>
-        <ul>
-          <li><a href="dossiers.html">Klimaat &amp; Duurzaamheid</a></li>
-          <li><a href="dossiers.html">Betaalbaar Wonen</a></li>
-          <li><a href="dossiers.html">Zorg &amp; Welzijn</a></li>
-          <li><a href="dossiers.html">Onderwijs &amp; Kansen</a></li>
-          <li><a href="dossiers.html">Mobiliteit</a></li>
-          <li><a href="dossiers.html">Inclusie &amp; Diversiteit</a></li>
-        </ul>
-      </div>
-      <div class="footer-kolom">
-        <h5>Contact</h5>
-        <ul>
-          <li><a href="mailto:info@progressiefbaarn.nl">info@progressiefbaarn.nl</a></li>
-          <li><a href="tel:+31355420000">035 542 0000</a></li>
-          <li><a href="#">Gemeentehuis Baarn</a></li>
-          <li><a href="https://www.pvda.nl" target="_blank" rel="noopener">pvda.nl</a></li>
-          <li><a href="https://groenlinks.nl" target="_blank" rel="noopener">groenlinks.nl</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-onderlijn">
-      <span>© 2026 Progressief Baarn — PvdA &amp; GroenLinks</span>
-      <div class="footer-onderlijn-links">
-        <a href="#">Privacybeleid</a>
-        <a href="#">Toegankelijkheid</a>
-      </div>
-      <div class="footer-merken">
-        <span>PvdA</span> × <span>GroenLinks</span>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<script src="assets/main.js"></script>
-</body>
-</html>

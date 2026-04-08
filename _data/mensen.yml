@@ -1,0 +1,121 @@
+# ────────────────────────────────────────────────
+# MENSEN — voeg hier raadsleden, wethouders en
+# bestuursleden toe.
+#
+# portefeuilles: gebruik de 'id' uit dossiers.yml
+# partij: 'pvda' of 'gl'
+# foto: bestandsnaam in assets/fotos/ (of leeg laten)
+# ────────────────────────────────────────────────
+
+raadsleden:
+  - naam: Thomas Bakker
+    functie: Fractievoorzitter & Raadslid
+    partij: pvda
+    portefeuilles:
+      - financien
+      - bestuur
+    bio: >
+      Thomas is fractievoorzitter en zet zich al jaren in voor transparant
+      gemeentebestuur en gezonde gemeentefinanciën. Hij is betrokken bij
+      diverse maatschappelijke organisaties in Baarn.
+    email: t.bakker@baarn.nl
+    foto:
+
+  - naam: Sara Jansen
+    functie: Raadslid
+    partij: gl
+    portefeuilles:
+      - onderwijs
+      - inclusie
+    bio: >
+      Sara is onderwijzeres en zet haar kennis in voor beter onderwijs en
+      meer kansen voor jongeren in Baarn. Actief in de buurtvereniging
+      Baarn-Noord.
+    email: s.jansen@baarn.nl
+    foto:
+
+  - naam: Pieter van Dam
+    functie: Raadslid
+    partij: pvda
+    portefeuilles:
+      - zorg
+      - mobiliteit
+    bio: >
+      Pieter werkt als maatschappelijk werker en kent de uitdagingen in
+      de zorg van binnenuit. Hij pleit voor toegankelijke zorg en goede
+      ondersteuning van mantelzorgers.
+    email: p.vandam@baarn.nl
+    foto:
+
+  - naam: Mies de Groot
+    functie: Raadslid
+    partij: gl
+    portefeuilles:
+      - ruimtelijke-ordening
+      - mobiliteit
+      - klimaat
+    bio: >
+      Mies is stedenbouwkundige en zet zich in voor een goed ingerichte
+      openbare ruimte, veilige fietsinfrastructuur en duurzame
+      mobiliteitsoplossingen voor Baarn.
+    email: m.degroot@baarn.nl
+    foto:
+
+wethouder:
+  - naam: Anna de Vries
+    functie: Wethouder
+    partij: gl
+    portefeuilles:
+      - klimaat
+      - wonen
+      - ruimtelijke-ordening
+    bio: >
+      Anna de Vries is de wethouder van Progressief Baarn. Als voormalig
+      milieu-ingenieur brengt zij jarenlange expertise mee op het gebied van
+      duurzaamheid en klimaatbeleid. Zij zet zich in voor een ambitieus
+      klimaatprogramma, meer betaalbare woningen en een groene leefomgeving.
+    email: a.devries@baarn.nl
+    spreekuur: "Elke dinsdag 15:00–16:30 uur, Gemeentehuis Baarn"
+    foto:
+
+bestuur:
+  - naam: Klaas Mulder
+    functie: Voorzitter
+    partij: pvda
+    bio: >
+      Klaas leidt de partij en is verantwoordelijk voor de samenwerking
+      tussen PvdA en GroenLinks in Baarn. Jarenlange ervaring in lokale
+      politiek.
+    foto:
+
+  - naam: Inge Smit
+    functie: Secretaris
+    partij: gl
+    bio: >
+      Inge verzorgt de communicatie van Progressief Baarn, beheert het
+      ledenbestand en organiseert ledenvergaderingen en evenementen.
+    foto:
+
+  - naam: Roel Vermeer
+    functie: Penningmeester
+    partij: pvda
+    bio: >
+      Roel beheert de financiën en zorgt voor een transparante
+      verantwoording van inkomsten en uitgaven.
+    foto:
+
+  - naam: Farah El Amrani
+    functie: Bestuurslid Campagne
+    partij: gl
+    bio: >
+      Farah is verantwoordelijk voor campagneactiviteiten en
+      werft nieuwe leden voor PvdA en GroenLinks in Baarn.
+    foto:
+
+  - naam: Jan Hoekstra
+    functie: Bestuurslid Programma & Beleid
+    partij: pvda
+    bio: >
+      Jan werkt aan inhoudelijke programma's en beleidsstandpunten
+      en ondersteunt de fractie met inhoudelijk advies.
+    foto:

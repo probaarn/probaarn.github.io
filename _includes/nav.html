@@ -1,0 +1,21 @@
+<nav class="navbar">
+  <div class="container nav-binnen">
+    <a href="{{ '/' | relative_url }}" class="nav-logo">
+      <img src="{{ '/assets/logo.webp' | relative_url }}" alt="{{ site.title }} logo" class="nav-logo-afbeelding">
+      <span class="nav-logo-tekst">
+        <span class="logo-hoofdlijn">Progressief</span>
+        <span class="logo-sublijn">Baarn</span>
+      </span>
+    </a>
+    <button class="nav-knop" aria-label="Menu openen" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-menu">
+      <li><a href="{{ '/' | relative_url }}"{% if page.url == '/' %} class="actief"{% endif %}>Home</a></li>
+      <li><a href="{{ '/mensen' | relative_url }}"{% if page.url contains 'mensen' %} class="actief"{% endif %}>Mensen</a></li>
+      <li><a href="{{ '/nieuws' | relative_url }}"{% if page.url contains 'nieuws' %} class="actief"{% endif %}>Nieuws</a></li>
+      <li><a href="{{ '/dossiers' | relative_url }}"{% if page.url contains 'dossiers' %} class="actief"{% endif %}>Dossiers</a></li>
+      <li><a href="{{ '/contact' | relative_url }}" class="nav-actie">Contact</a></li>
+    </ul>
+  </div>
+</nav>

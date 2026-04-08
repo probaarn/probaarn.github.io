@@ -1,56 +1,25 @@
-<!DOCTYPE html>
-<html lang="nl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact — Progressief Baarn</title>
-  <meta name="description" content="Neem contact op met Progressief Baarn. We staan altijd open voor vragen, ideeën of meldingen van inwoners van Baarn.">
-  <link rel="stylesheet" href="assets/style.css">
-  <link rel="icon" href="assets/logo.webp">
-</head>
-<body>
+---
+layout: default
+title: Contact
+description: Neem contact op met Progressief Baarn. We staan altijd open voor vragen, ideeën of meldingen van inwoners van Baarn.
+---
 
-<!-- NAVIGATIE -->
-<nav class="navbar">
-  <div class="container nav-binnen">
-    <a href="index.html" class="nav-logo">
-      <img src="assets/logo.webp" alt="Progressief Baarn logo" class="nav-logo-afbeelding">
-      <span class="nav-logo-tekst">
-        <span class="logo-hoofdlijn">Progressief</span>
-        <span class="logo-sublijn">Baarn</span>
-      </span>
-    </a>
-    <button class="nav-knop" aria-label="Menu openen">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="mensen.html">Mensen</a></li>
-      <li><a href="nieuws.html">Nieuws</a></li>
-      <li><a href="dossiers.html">Dossiers</a></li>
-      <li><a href="contact.html" class="nav-actie">Contact</a></li>
-    </ul>
-  </div>
-</nav>
-
-<!-- PAGINA HEADER -->
 <header class="pagina-header">
-  <img src="assets/logo.webp" alt="" class="pagina-header-roos" aria-hidden="true">
+  <img src="{{ '/assets/logo.webp' | relative_url }}" alt="" class="pagina-header-roos" aria-hidden="true">
   <div class="container pagina-header-binnen">
-    <p class="sectie-label sectie-label--wit">In gesprek</p>
+    <p class="sectie-label sectie-label--rood">In gesprek</p>
     <h1>Contact</h1>
     <p>Heb je een vraag, idee of wil je iets melden? We staan altijd open voor inwoners van Baarn.</p>
   </div>
 </header>
 
-<!-- CONTACT SECTIE -->
 <section class="sectie">
   <div class="container">
     <div class="contact-rooster">
 
       <!-- FORMULIER -->
-      <div class="contact-formulier">
-        <p class="sectie-label">Stuur een bericht</p>
+      <div>
+        <p class="sectie-label sectie-label--rood">Stuur een bericht</p>
         <h2 style="margin-bottom: 2rem; font-size: clamp(1.6rem, 3vw, 2.2rem);">Neem contact op</h2>
 
         <form id="contactFormulier" novalidate>
@@ -64,116 +33,109 @@
               <input type="text" id="achternaam" name="achternaam" class="formulier-veld" placeholder="Jansen" required>
             </div>
           </div>
-
           <div class="formulier-groep">
             <label class="formulier-label" for="email">E-mailadres *</label>
             <input type="email" id="email" name="email" class="formulier-veld" placeholder="jan@voorbeeld.nl" required>
           </div>
-
           <div class="formulier-groep">
             <label class="formulier-label" for="telefoon">Telefoonnummer <span style="font-weight:400;text-transform:none;letter-spacing:0;">(optioneel)</span></label>
             <input type="tel" id="telefoon" name="telefoon" class="formulier-veld" placeholder="06 12 345 678">
           </div>
-
           <div class="formulier-groep">
             <label class="formulier-label" for="onderwerp">Onderwerp *</label>
             <select id="onderwerp" name="onderwerp" class="formulier-veld" required>
               <option value="" disabled selected>Kies een onderwerp…</option>
-              <option value="klimaat">Klimaat &amp; Duurzaamheid</option>
-              <option value="wonen">Betaalbaar Wonen</option>
-              <option value="zorg">Zorg &amp; Welzijn</option>
-              <option value="onderwijs">Onderwijs &amp; Kansen</option>
-              <option value="mobiliteit">Mobiliteit &amp; OV</option>
-              <option value="inclusie">Inclusie &amp; Diversiteit</option>
+              {% for dossier in site.data.dossiers %}
+              <option value="{{ dossier.id }}">{{ dossier.naam }}</option>
+              {% endfor %}
               <option value="lidmaatschap">Lidmaatschap / Vrijwilligerswerk</option>
               <option value="pers">Pers &amp; Media</option>
               <option value="overig">Overig</option>
             </select>
           </div>
-
           <div class="formulier-groep">
             <label class="formulier-label" for="bericht">Uw bericht *</label>
             <textarea id="bericht" name="bericht" class="formulier-veld" placeholder="Schrijf hier uw vraag of bericht…" required></textarea>
           </div>
-
           <div class="formulier-toestemming">
             <input type="checkbox" id="toestemming" name="toestemming" required>
-            <label for="toestemming">
-              Ik ga akkoord met het <a href="#" style="color: var(--groen); text-decoration: underline;">privacybeleid</a> van Progressief Baarn. Mijn gegevens worden alleen gebruikt om te reageren op dit bericht.
-            </label>
+            <label for="toestemming">Ik ga akkoord met het <a href="#" style="color: var(--groen); text-decoration: underline;">privacybeleid</a> van Progressief Baarn.</label>
           </div>
-
           <button type="submit" class="knop knop-primair" style="width: 100%; justify-content: center; padding: 1rem;">
             Bericht versturen →
           </button>
-
           <div class="melding-succes" role="alert">
-            ✓ Uw bericht is verstuurd! We reageren zo snel mogelijk, uiterlijk binnen 3 werkdagen.
+            ✓ Uw bericht is verstuurd! We reageren uiterlijk binnen 3 werkdagen.
           </div>
         </form>
       </div>
 
       <!-- CONTACT INFO -->
       <div class="contact-info">
-        <p class="sectie-label">Bereikbaarheid</p>
+        <p class="sectie-label sectie-label--donker">Bereikbaarheid</p>
         <h3>Hoe kunt u ons bereiken?</h3>
 
         <div class="contact-item">
           <div class="contact-icoon">✉️</div>
           <div class="contact-tekst">
             <strong>E-mail</strong>
-            <span><a href="mailto:info@progressiefbaarn.nl">info@progressiefbaarn.nl</a></span>
+            <span><a href="mailto:{{ site.email }}">{{ site.email }}</a></span>
           </div>
         </div>
-
         <div class="contact-item">
           <div class="contact-icoon">📞</div>
           <div class="contact-tekst">
             <strong>Telefoon</strong>
-            <span><a href="tel:+31355420000">035 542 0000</a></span>
+            <span><a href="tel:{{ site.telefoon | remove: ' ' }}">{{ site.telefoon }}</a></span>
           </div>
         </div>
-
         <div class="contact-item">
           <div class="contact-icoon">🏛️</div>
           <div class="contact-tekst">
             <strong>Bezoekadres</strong>
-            <span>Gemeentehuis Baarn<br>Laanstraat 1<br>3743 BS Baarn</span>
+            <span>Gemeentehuis Baarn<br>{{ site.adres }}</span>
           </div>
         </div>
-
         <div class="contact-item">
           <div class="contact-icoon">🕐</div>
           <div class="contact-tekst">
             <strong>Raadsvergaderingen</strong>
-            <span>Elke derde donderdag van de maand, 20:00 uur. Publiek is van harte welkom!</span>
+            <span>Elke derde donderdag van de maand, 20:00 uur. Publiek welkom!</span>
           </div>
         </div>
-
         <div class="contact-item">
           <div class="contact-icoon">💬</div>
           <div class="contact-tekst">
             <strong>Spreekuur fractie</strong>
-            <span>Iedere eerste dinsdag van de maand, 18:00–19:30 uur in het gemeentehuis.</span>
+            <span>Elke eerste dinsdag van de maand, 18:00–19:30 uur.</span>
           </div>
         </div>
 
-        <!-- Sociale media -->
-        <div style="margin-top: 2.5rem;">
-          <p class="sectie-label">Volg ons</p>
-          <p style="font-size: 0.88rem; color: var(--mid); margin-bottom: 1rem;">Blijf op de hoogte van ons laatste nieuws en activiteiten via sociale media.</p>
+        {% for persoon in site.data.mensen.wethouder %}
+        {% if persoon.spreekuur %}
+        <div class="contact-item">
+          <div class="contact-icoon">🌿</div>
+          <div class="contact-tekst">
+            <strong>Spreekuur wethouder {{ persoon.naam }}</strong>
+            <span>{{ persoon.spreekuur }}</span>
+          </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+
+        <div style="margin-top: 2rem;">
+          <p class="sectie-label sectie-label--donker">Volg ons</p>
           <div class="sociaal-links">
-            <a href="#" class="sociaal-link" aria-label="Facebook" title="Facebook">f</a>
-            <a href="#" class="sociaal-link" aria-label="Twitter/X" title="Twitter/X">𝕏</a>
-            <a href="#" class="sociaal-link" aria-label="Instagram" title="Instagram">▣</a>
-            <a href="#" class="sociaal-link" aria-label="LinkedIn" title="LinkedIn">in</a>
+            <a href="#" class="sociaal-link" aria-label="Facebook">f</a>
+            <a href="#" class="sociaal-link" aria-label="Twitter/X">𝕏</a>
+            <a href="#" class="sociaal-link" aria-label="Instagram">▣</a>
+            <a href="#" class="sociaal-link" aria-label="LinkedIn">in</a>
           </div>
         </div>
 
-        <!-- Lid worden blok -->
-        <div style="margin-top: 2.5rem; background: var(--groen-licht); border-radius: var(--radius-lg); padding: 1.75rem; border-left: 4px solid var(--groen);">
-          <p style="font-family: var(--font-display); font-weight: 800; font-size: 1.3rem; text-transform: uppercase; margin-bottom: 0.5rem;">Lid worden?</p>
-          <p style="font-size: 0.88rem; color: var(--mid); margin-bottom: 1.25rem; line-height: 1.6;">Steun onze partijen door lid te worden van PvdA of GroenLinks. Samen zijn we sterker.</p>
+        <div class="lid-worden-blok">
+          <p>Lid worden?</p>
+          <p style="font-size: 0.88rem; color: var(--mid); margin-bottom: 1.25rem; line-height: 1.6;">Steun onze partijen door lid te worden van PvdA of GroenLinks.</p>
           <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
             <a href="https://www.pvda.nl/word-lid/" target="_blank" rel="noopener" class="knop knop-primair" style="font-size: 0.8rem; padding: 0.65rem 1.25rem;">Word PvdA-lid</a>
             <a href="https://groenlinks.nl/lid-worden" target="_blank" rel="noopener" class="knop knop-groen" style="font-size: 0.8rem; padding: 0.65rem 1.25rem;">Word GL-lid</a>
@@ -184,81 +146,3 @@
     </div>
   </div>
 </section>
-
-<!-- KAART SECTIE (Placeholder) -->
-<section class="sectie-klein" style="background: var(--licht);">
-  <div class="container">
-    <p class="sectie-label">Locatie</p>
-    <h3 style="margin-bottom: 1.5rem;">Gemeente Baarn</h3>
-    <div style="background: var(--rand); border-radius: var(--radius-lg); height: 300px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 1rem; color: var(--mid);">
-      <span style="font-size: 3rem;">🗺️</span>
-      <p style="font-family: var(--font-ui); font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.08em;">Baarn, Utrecht, Nederland</p>
-      <a href="https://maps.google.com/?q=Laanstraat+1,+Baarn" target="_blank" rel="noopener" class="knop knop-omlijnd" style="font-size: 0.8rem; padding: 0.6rem 1.25rem;">Open in Google Maps →</a>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-rooster">
-      <div>
-        <div class="footer-logo-wrap">
-          <img src="assets/logo.webp" alt="Progressief Baarn" class="footer-logo-afb">
-          <span class="footer-logo-tekst nav-logo-tekst">
-            <span class="logo-hoofdlijn">Progressief</span>
-            <span class="logo-sublijn">Baarn</span>
-          </span>
-        </div>
-        <p class="footer-tagline">De lokale samenwerking van PvdA en GroenLinks in de gemeente Baarn.</p>
-        <div class="footer-sociaal">
-          <a href="#" aria-label="Facebook">f</a>
-          <a href="#" aria-label="Twitter">𝕏</a>
-          <a href="#" aria-label="Instagram">▣</a>
-          <a href="#" aria-label="LinkedIn">in</a>
-        </div>
-      </div>
-      <div class="footer-kolom">
-        <h5>Navigatie</h5>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="mensen.html">Mensen</a></li>
-          <li><a href="nieuws.html">Nieuws</a></li>
-          <li><a href="dossiers.html">Dossiers</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-kolom">
-        <h5>Dossiers</h5>
-        <ul>
-          <li><a href="dossiers.html">Klimaat &amp; Duurzaamheid</a></li>
-          <li><a href="dossiers.html">Betaalbaar Wonen</a></li>
-          <li><a href="dossiers.html">Zorg &amp; Welzijn</a></li>
-          <li><a href="dossiers.html">Onderwijs &amp; Kansen</a></li>
-          <li><a href="dossiers.html">Mobiliteit</a></li>
-        </ul>
-      </div>
-      <div class="footer-kolom">
-        <h5>Contact</h5>
-        <ul>
-          <li><a href="mailto:info@progressiefbaarn.nl">info@progressiefbaarn.nl</a></li>
-          <li><a href="tel:+31355420000">035 542 0000</a></li>
-          <li><a href="#">Laanstraat 1, Baarn</a></li>
-          <li><a href="https://www.pvda.nl" target="_blank" rel="noopener">pvda.nl</a></li>
-          <li><a href="https://groenlinks.nl" target="_blank" rel="noopener">groenlinks.nl</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-onderlijn">
-      <span>© 2026 Progressief Baarn — PvdA &amp; GroenLinks</span>
-      <div class="footer-onderlijn-links">
-        <a href="#">Privacybeleid</a>
-        <a href="#">Toegankelijkheid</a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<script src="assets/main.js"></script>
-</body>
-</html>

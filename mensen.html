@@ -1,227 +1,156 @@
-<!DOCTYPE html>
-<html lang="nl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mensen — Progressief Baarn</title>
-  <meta name="description" content="Maak kennis met de raadsleden, wethouder en bestuursleden van Progressief Baarn.">
-  <link rel="stylesheet" href="assets/style.css">
-  <link rel="icon" href="assets/logo.webp">
-</head>
-<body>
+---
+layout: default
+title: Mensen
+description: Maak kennis met de raadsleden, wethouder en bestuursleden van Progressief Baarn.
+---
 
-<!-- NAVIGATIE -->
-<nav class="navbar">
-  <div class="container nav-binnen">
-    <a href="index.html" class="nav-logo">
-      <img src="assets/logo.webp" alt="Progressief Baarn logo" class="nav-logo-afbeelding">
-      <span class="nav-logo-tekst">
-        <span class="logo-hoofdlijn">Progressief</span>
-        <span class="logo-sublijn">Baarn</span>
-      </span>
-    </a>
-    <button class="nav-knop" aria-label="Menu openen">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="mensen.html">Mensen</a></li>
-      <li><a href="nieuws.html">Nieuws</a></li>
-      <li><a href="dossiers.html">Dossiers</a></li>
-      <li><a href="contact.html" class="nav-actie">Contact</a></li>
-    </ul>
-  </div>
-</nav>
-
-<!-- PAGINA HEADER -->
 <header class="pagina-header">
-  <img src="assets/logo.webp" alt="" class="pagina-header-roos" aria-hidden="true">
+  <img src="{{ '/assets/logo.webp' | relative_url }}" alt="" class="pagina-header-roos" aria-hidden="true">
   <div class="container pagina-header-binnen">
-    <p class="sectie-label sectie-label--wit">Progressief Baarn</p>
+    <p class="sectie-label sectie-label--rood">Progressief Baarn</p>
     <h1>Ons team</h1>
     <p>Maak kennis met de raadsleden, wethouder en bestuursleden die zich dagelijks inzetten voor een beter Baarn.</p>
   </div>
 </header>
 
-<!-- MENSEN SECTIE -->
 <section class="sectie">
   <div class="container">
 
-    <!-- Tab navigatie -->
     <nav class="tab-nav" role="tablist">
-      <button class="tab-knop actief" data-tab="raadsleden" role="tab" aria-selected="true">
-        Raadsleden
-      </button>
-      <button class="tab-knop" data-tab="wethouder" role="tab" aria-selected="false">
-        Wethouder
-      </button>
-      <button class="tab-knop" data-tab="bestuur" role="tab" aria-selected="false">
-        Bestuur
-      </button>
+      <button class="tab-knop actief" data-tab="raadsleden" role="tab">Raadsleden</button>
+      <button class="tab-knop" data-tab="wethouder" role="tab">Wethouder</button>
+      <button class="tab-knop" data-tab="bestuur" role="tab">Bestuur</button>
     </nav>
 
     <!-- RAADSLEDEN -->
     <div id="raadsleden" class="tab-inhoud actief">
       <div class="persoon-rooster-volledig">
-
+        {% for persoon in site.data.mensen.raadsleden %}
         <article class="persoon-kaart-volledig">
-          <div class="persoon-foto-placeholder" style="background: linear-gradient(160deg, #E6F5D8 0%, #B8E090 100%);">👨</div>
+          <div class="persoon-foto-placeholder" style="background: linear-gradient(160deg, var(--groen-bg) 0%, var(--groen-kaart) 100%);">
+            {% if persoon.foto %}
+              <img src="{{ '/assets/fotos/' | append: persoon.foto | relative_url }}" alt="{{ persoon.naam }}">
+            {% else %}
+              👤
+            {% endif %}
+          </div>
           <div class="persoon-info">
-            <p class="persoon-rol">Fractievoorzitter &amp; Raadslid</p>
-            <p class="persoon-naam">Thomas Bakker</p>
-            <p class="persoon-focus">Financiën &amp; Bestuur</p>
-            <p class="persoon-bio">Thomas is fractievoorzitter en zet zich al jaren in voor transparant gemeentebestuur en gezonde gemeentefinanciën. Hij is lid van PvdA en is betrokken bij diverse maatschappelijke organisaties in Baarn.</p>
-            <span class="persoon-badge persoon-badge--pvda">PvdA</span>
+            <p class="persoon-rol">{{ persoon.functie }}</p>
+            <p class="persoon-naam">{{ persoon.naam }}</p>
+            <p class="persoon-bio">{{ persoon.bio }}</p>
+            {% if persoon.portefeuilles %}
+            <div class="portefeuilles">
+              {% for id in persoon.portefeuilles %}
+                {% assign dossier = site.data.dossiers | where: "id", id | first %}
+                {% if dossier %}
+                  <span class="portefeuille-badge">{{ dossier.icoon }} {{ dossier.naam }}</span>
+                {% endif %}
+              {% endfor %}
+            </div>
+            {% endif %}
+            <span class="persoon-badge persoon-badge--{{ persoon.partij }}">
+              {% if persoon.partij == 'pvda' %}PvdA{% else %}GroenLinks{% endif %}
+            </span>
+            {% if persoon.email %}
+            <div style="margin-top: 0.75rem;">
+              <a href="mailto:{{ persoon.email }}" style="font-family: var(--font-ui); font-size: 0.82rem; color: var(--groen);">{{ persoon.email }}</a>
+            </div>
+            {% endif %}
           </div>
         </article>
-
-        <article class="persoon-kaart-volledig">
-          <div class="persoon-foto-placeholder" style="background: linear-gradient(160deg, #FFE8EF 0%, #FFD0B8 100%);">👩</div>
-          <div class="persoon-info">
-            <p class="persoon-rol">Raadslid</p>
-            <p class="persoon-naam">Sara Jansen</p>
-            <p class="persoon-focus">Onderwijs, Jeugd &amp; Cultuur</p>
-            <p class="persoon-bio">Sara is onderwijzeres van beroep en zet haar kennis in voor beter onderwijs en meer kansen voor jongeren in Baarn. Zij is lid van GroenLinks en actief in de buurtvereniging Baarn-Noord.</p>
-            <span class="persoon-badge persoon-badge--gl">GroenLinks</span>
-          </div>
-        </article>
-
-        <article class="persoon-kaart-volledig">
-          <div class="persoon-foto-placeholder" style="background: linear-gradient(160deg, #E6F5D8 0%, #C8D8F5 100%);">👨</div>
-          <div class="persoon-info">
-            <p class="persoon-rol">Raadslid</p>
-            <p class="persoon-naam">Pieter van Dam</p>
-            <p class="persoon-focus">Zorg, Welzijn &amp; Sport</p>
-            <p class="persoon-bio">Pieter werkt als maatschappelijk werker en kent de uitdagingen in de zorg van binnenuit. Hij pleit in de raad voor toegankelijke zorg en goede ondersteuning van mantelzorgers.</p>
-            <span class="persoon-badge persoon-badge--pvda">PvdA</span>
-          </div>
-        </article>
-
-        <article class="persoon-kaart-volledig">
-          <div class="persoon-foto-placeholder" style="background: linear-gradient(160deg, #FFF0D8 0%, #FFD8A0 100%);">👩</div>
-          <div class="persoon-info">
-            <p class="persoon-rol">Raadslid</p>
-            <p class="persoon-naam">Mies de Groot</p>
-            <p class="persoon-focus">Ruimtelijke Ordening &amp; Mobiliteit</p>
-            <p class="persoon-bio">Mies is stedenbouwkundige en zet zich in voor een goed ingerichte openbare ruimte, veilige fietsinfrastructuur en duurzame mobiliteitsoplossingen voor Baarn.</p>
-            <span class="persoon-badge persoon-badge--gl">GroenLinks</span>
-          </div>
-        </article>
-
+        {% endfor %}
       </div>
     </div>
 
     <!-- WETHOUDER -->
     <div id="wethouder" class="tab-inhoud">
-      <div style="max-width: 680px; margin: 0 auto;">
-        <article class="persoon-kaart-volledig" style="display: grid; grid-template-columns: 280px 1fr; gap: 0; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--schaduw-lg);">
-          <div class="persoon-foto-placeholder" style="background: linear-gradient(160deg, #FFE8EF 0%, #FFB8CC 100%); aspect-ratio: auto; min-height: 320px;">👩</div>
-          <div class="persoon-info" style="padding: 2.5rem 2rem;">
-            <p class="persoon-rol persoon-rol--wethouder">Wethouder</p>
-            <p class="persoon-naam" style="font-size: 2rem; margin-bottom: 0.5rem;">Anna de Vries</p>
-            <p class="persoon-focus" style="font-size: 1rem; margin-bottom: 1.25rem;">Klimaat, Duurzaamheid, Volkshuisvesting &amp; Ruimtelijke Ordening</p>
-            <p class="persoon-bio" style="font-size: 0.95rem; line-height: 1.7;">Anna de Vries is de wethouder van Progressief Baarn. Als voormalig milieu-ingenieur brengt zij jarenlange expertise mee op het gebied van duurzaamheid en klimaatbeleid. Zij zet zich in voor een ambitieus klimaatprogramma, meer betaalbare woningen en een groene leefomgeving voor alle Baarners.</p>
-            <p class="persoon-bio" style="font-size: 0.95rem; line-height: 1.7; margin-top: 0.75rem;">Anna is bereikbaar via het gemeentehuis en houdt wekelijks spreekuur voor inwoners.</p>
-            <span class="persoon-badge persoon-badge--gl" style="margin-top: 1.25rem;">GroenLinks</span>
-            <div style="margin-top: 1.5rem;">
-              <a href="contact.html" class="knop knop-primair" style="font-size: 0.82rem; padding: 0.7rem 1.4rem;">Neem contact op</a>
-            </div>
+      {% for persoon in site.data.mensen.wethouder %}
+      <div class="wethouder-kaart">
+        <div class="persoon-foto-placeholder" style="background: linear-gradient(160deg, var(--roze-bg) 0%, var(--roze-kaart) 100%);">
+          {% if persoon.foto %}
+            <img src="{{ '/assets/fotos/' | append: persoon.foto | relative_url }}" alt="{{ persoon.naam }}">
+          {% else %}
+            👤
+          {% endif %}
+        </div>
+        <div class="persoon-info">
+          <p class="persoon-rol persoon-rol--wethouder">{{ persoon.functie }}</p>
+          <p class="persoon-naam" style="font-size: 2rem; margin-bottom: 0.5rem;">{{ persoon.naam }}</p>
+          <p class="persoon-bio" style="font-size: 0.95rem; line-height: 1.72; margin-top: 0.5rem;">{{ persoon.bio }}</p>
+          {% if persoon.portefeuilles %}
+          <div class="portefeuilles" style="margin-top: 1.25rem;">
+            {% for id in persoon.portefeuilles %}
+              {% assign dossier = site.data.dossiers | where: "id", id | first %}
+              {% if dossier %}
+                <span class="portefeuille-badge">{{ dossier.icoon }} {{ dossier.naam }}</span>
+              {% endif %}
+            {% endfor %}
           </div>
-        </article>
-      </div>
-
-      <!-- Portefeuille -->
-      <div style="margin-top: 3rem;">
-        <h3 style="margin-bottom: 1.5rem;">Portefeuille</h3>
-        <div class="dossier-rooster">
-          <div class="dossier-kaart">
-            <div class="dossier-icoon">🌱</div>
-            <p class="dossier-titel">Klimaat &amp; Duurzaamheid</p>
-            <p class="dossier-omschrijving">Transitievisie warmte, zonnepanelen op gemeentelijk vastgoed, energiecoöperaties en klimaatadaptatie.</p>
-          </div>
-          <div class="dossier-kaart">
-            <div class="dossier-icoon">🏠</div>
-            <p class="dossier-titel">Volkshuisvesting</p>
-            <p class="dossier-omschrijving">Realisatie van sociale huurwoningen, starters­woningen en prestatieafspraken met woningcorporaties.</p>
-          </div>
-          <div class="dossier-kaart">
-            <div class="dossier-icoon">🗺️</div>
-            <p class="dossier-titel">Ruimtelijke Ordening</p>
-            <p class="dossier-omschrijving">Omgevingsvisie, bestemmingsplannen en de groene inrichting van de openbare ruimte in Baarn.</p>
+          {% endif %}
+          {% if persoon.spreekuur %}
+          <p style="font-family: var(--font-ui); font-size: 0.82rem; color: var(--mid); margin-top: 1rem;">
+            🕐 Spreekuur: {{ persoon.spreekuur }}
+          </p>
+          {% endif %}
+          <span class="persoon-badge persoon-badge--{{ persoon.partij }}" style="margin-top: 1.25rem;">
+            {% if persoon.partij == 'pvda' %}PvdA{% else %}GroenLinks{% endif %}
+          </span>
+          <div style="margin-top: 1.5rem;">
+            <a href="{{ '/contact' | relative_url }}" class="knop knop-primair" style="font-size: 0.82rem; padding: 0.7rem 1.4rem;">Neem contact op</a>
           </div>
         </div>
       </div>
+
+      <!-- Portefeuille-dossiers uitgebreid -->
+      {% if persoon.portefeuilles %}
+      <div style="margin-top: 3.5rem;">
+        <h3 style="margin-bottom: 1.5rem;">Portefeuille</h3>
+        <div class="dossier-rooster">
+          {% for id in persoon.portefeuilles %}
+            {% assign dossier = site.data.dossiers | where: "id", id | first %}
+            {% if dossier %}
+            <div class="dossier-kaart {% if dossier.kleur == 'rood' %}dossier-kaart--rood{% endif %}">
+              <div class="dossier-icoon">{{ dossier.icoon }}</div>
+              <p class="dossier-titel">{{ dossier.naam }}</p>
+              <p class="dossier-omschrijving">{{ dossier.omschrijving | truncatewords: 25 }}</p>
+            </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
     </div>
 
     <!-- BESTUUR -->
     <div id="bestuur" class="tab-inhoud">
-      <div style="margin-bottom: 2rem;">
-        <p style="color: var(--mid); max-width: 600px;">Het bestuur van Progressief Baarn is verantwoordelijk voor de organisatie van de partij, de ledenvergaderingen en de campagne-activiteiten.</p>
-      </div>
+      <p style="color: var(--mid); max-width: 600px; margin-bottom: 2rem;">Het bestuur van Progressief Baarn is verantwoordelijk voor de organisatie, ledenvergaderingen en campagne-activiteiten.</p>
       <div class="persoon-rooster-volledig">
-
+        {% for persoon in site.data.mensen.bestuur %}
         <article class="persoon-kaart-volledig">
-          <div class="persoon-foto-placeholder" style="background: linear-gradient(160deg, #E6F5D8 0%, #A0D870 100%);">👨</div>
+          <div class="persoon-foto-placeholder" style="background: linear-gradient(160deg, var(--licht) 0%, var(--rand) 100%);">
+            {% if persoon.foto %}
+              <img src="{{ '/assets/fotos/' | append: persoon.foto | relative_url }}" alt="{{ persoon.naam }}">
+            {% else %}
+              👤
+            {% endif %}
+          </div>
           <div class="persoon-info">
-            <p class="persoon-rol">Voorzitter</p>
-            <p class="persoon-naam">Klaas Mulder</p>
-            <p class="persoon-focus">Partijvoorzitter Progressief Baarn</p>
-            <p class="persoon-bio">Klaas leidt de partij en is verantwoordelijk voor de samenwerking tussen PvdA en GroenLinks in Baarn. Jarenlange ervaring in lokale politiek.</p>
-            <span class="persoon-badge persoon-badge--pvda">PvdA</span>
+            <p class="persoon-rol">{{ persoon.functie }}</p>
+            <p class="persoon-naam">{{ persoon.naam }}</p>
+            <p class="persoon-bio">{{ persoon.bio }}</p>
+            <span class="persoon-badge persoon-badge--{{ persoon.partij }}">
+              {% if persoon.partij == 'pvda' %}PvdA{% else %}GroenLinks{% endif %}
+            </span>
           </div>
         </article>
-
-        <article class="persoon-kaart-volledig">
-          <div class="persoon-foto-placeholder" style="background: linear-gradient(160deg, #FFE8EF 0%, #F8C0D8 100%);">👩</div>
-          <div class="persoon-info">
-            <p class="persoon-rol">Secretaris</p>
-            <p class="persoon-naam">Inge Smit</p>
-            <p class="persoon-focus">Secretaris &amp; Communicatie</p>
-            <p class="persoon-bio">Inge verzorgt de communicatie van Progressief Baarn, beheert het ledenbestand en organiseert de ledenvergaderingen en evenementen.</p>
-            <span class="persoon-badge persoon-badge--gl">GroenLinks</span>
-          </div>
-        </article>
-
-        <article class="persoon-kaart-volledig">
-          <div class="persoon-foto-placeholder" style="background: linear-gradient(160deg, #FFF0D8 0%, #FFCCA0 100%);">👨</div>
-          <div class="persoon-info">
-            <p class="persoon-rol">Penningmeester</p>
-            <p class="persoon-naam">Roel Vermeer</p>
-            <p class="persoon-focus">Financiën &amp; Administratie</p>
-            <p class="persoon-bio">Roel beheert de financiën van Progressief Baarn en zorgt voor een transparante verantwoording van inkomsten en uitgaven.</p>
-            <span class="persoon-badge persoon-badge--pvda">PvdA</span>
-          </div>
-        </article>
-
-        <article class="persoon-kaart-volledig">
-          <div class="persoon-foto-placeholder" style="background: linear-gradient(160deg, #E6F5D8 0%, #C0E8F0 100%);">👩</div>
-          <div class="persoon-info">
-            <p class="persoon-rol">Bestuurslid</p>
-            <p class="persoon-naam">Farah El Amrani</p>
-            <p class="persoon-focus">Campagne &amp; Ledenwerving</p>
-            <p class="persoon-bio">Farah is verantwoordelijk voor de campagneactiviteiten en werft nieuwe leden voor zowel PvdA als GroenLinks in Baarn.</p>
-            <span class="persoon-badge persoon-badge--gl">GroenLinks</span>
-          </div>
-        </article>
-
-        <article class="persoon-kaart-volledig">
-          <div class="persoon-foto-placeholder" style="background: linear-gradient(160deg, #E8E0F8 0%, #C8B8F0 100%);">👨</div>
-          <div class="persoon-info">
-            <p class="persoon-rol">Bestuurslid</p>
-            <p class="persoon-naam">Jan Hoekstra</p>
-            <p class="persoon-focus">Programma &amp; Beleid</p>
-            <p class="persoon-bio">Jan werkt aan de inhoudelijke programma's en beleidsstandpunten van Progressief Baarn, en ondersteunt de fractie met inhoudelijk advies.</p>
-            <span class="persoon-badge persoon-badge--pvda">PvdA</span>
-          </div>
-        </article>
-
+        {% endfor %}
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- CTA -->
 <section class="sectie-klein cta-sectie">
   <div class="container">
     <div class="cta-binnen">
@@ -229,72 +158,10 @@
       <h2>Wil jij ook een verschil maken?</h2>
       <p>Sluit je aan bij Progressief Baarn als lid of vrijwilliger en help mee aan een beter Baarn.</p>
       <div class="cta-acties">
-        <a href="contact.html" class="knop knop-primair">Neem contact op</a>
+        <a href="{{ '/contact' | relative_url }}" class="knop knop-primair">Neem contact op</a>
         <a href="https://www.pvda.nl/word-lid/" target="_blank" rel="noopener" class="knop knop-omlijnd-wit">Word PvdA-lid</a>
+        <a href="https://groenlinks.nl/lid-worden" target="_blank" rel="noopener" class="knop knop-omlijnd-wit">Word GL-lid</a>
       </div>
     </div>
   </div>
 </section>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-rooster">
-      <div>
-        <div class="footer-logo-wrap">
-          <img src="assets/logo.webp" alt="Progressief Baarn" class="footer-logo-afb">
-          <span class="footer-logo-tekst nav-logo-tekst">
-            <span class="logo-hoofdlijn">Progressief</span>
-            <span class="logo-sublijn">Baarn</span>
-          </span>
-        </div>
-        <p class="footer-tagline">De lokale samenwerking van PvdA en GroenLinks in de gemeente Baarn.</p>
-        <div class="footer-sociaal">
-          <a href="#" aria-label="Facebook">f</a>
-          <a href="#" aria-label="Twitter">𝕏</a>
-          <a href="#" aria-label="Instagram">▣</a>
-          <a href="#" aria-label="LinkedIn">in</a>
-        </div>
-      </div>
-      <div class="footer-kolom">
-        <h5>Navigatie</h5>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="mensen.html">Mensen</a></li>
-          <li><a href="nieuws.html">Nieuws</a></li>
-          <li><a href="dossiers.html">Dossiers</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-kolom">
-        <h5>Dossiers</h5>
-        <ul>
-          <li><a href="dossiers.html">Klimaat &amp; Duurzaamheid</a></li>
-          <li><a href="dossiers.html">Betaalbaar Wonen</a></li>
-          <li><a href="dossiers.html">Zorg &amp; Welzijn</a></li>
-          <li><a href="dossiers.html">Onderwijs &amp; Kansen</a></li>
-        </ul>
-      </div>
-      <div class="footer-kolom">
-        <h5>Contact</h5>
-        <ul>
-          <li><a href="mailto:info@progressiefbaarn.nl">info@progressiefbaarn.nl</a></li>
-          <li><a href="tel:+31355420000">035 542 0000</a></li>
-          <li><a href="https://www.pvda.nl" target="_blank" rel="noopener">pvda.nl</a></li>
-          <li><a href="https://groenlinks.nl" target="_blank" rel="noopener">groenlinks.nl</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-onderlijn">
-      <span>© 2026 Progressief Baarn — PvdA &amp; GroenLinks</span>
-      <div class="footer-onderlijn-links">
-        <a href="#">Privacybeleid</a>
-        <a href="#">Toegankelijkheid</a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<script src="assets/main.js"></script>
-</body>
-</html>

@@ -1,0 +1,115 @@
+# ────────────────────────────────────────────────
+# NIEUWS — voeg hier nieuwsberichten toe.
+# categorie: klimaat | wonen | zorg | onderwijs |
+#            mobiliteit | bestuur | inclusie
+# uitgelicht: true = groot kaartje op homepage
+# ────────────────────────────────────────────────
+
+- titel: Progressief Baarn wil ambitieuzer klimaatplan voor gemeente
+  datum: 2026-04-02
+  categorie: klimaat
+  uitgelicht: true
+  icoon: "🌱"
+  kleur: "groen"
+  intro: >
+    Progressief Baarn heeft in de gemeenteraad gepleit voor een versnelling
+    van het gemeentelijk klimaatbeleid. Baarn moet in 2040 klimaatneutraal
+    zijn, niet in 2050 zoals het college voorstelt. "We hebben geen tijd
+    te verliezen", aldus fractievoorzitter Thomas Bakker.
+  url: "#"
+
+- titel: Meer sociale huurwoningen in Baarn-Noord
+  datum: 2026-03-28
+  categorie: wonen
+  uitgelicht: false
+  icoon: "🏠"
+  kleur: "rood"
+  intro: >
+    Na jarenlang lobbyen heeft Progressief Baarn een meerderheid gevonden
+    voor 80 nieuwe sociale huurwoningen in Baarn-Noord. Een historisch
+    besluit voor starters en mensen met een smalle beurs.
+  url: "#"
+
+- titel: Vragen over bezuinigingen op jeugdzorg in Baarn
+  datum: 2026-03-21
+  categorie: zorg
+  uitgelicht: false
+  icoon: "❤️"
+  kleur: "donker"
+  intro: >
+    De fractie heeft schriftelijke vragen ingediend over de geplande
+    bezuinigingen op jeugdzorg. "Juist de kwetsbare kinderen worden
+    geraakt door dit beleid."
+  url: "#"
+
+- titel: Nieuw fietspad langs Hoofdstraat goedgekeurd
+  datum: 2026-03-14
+  categorie: mobiliteit
+  uitgelicht: false
+  icoon: "🚲"
+  kleur: "groen"
+  intro: >
+    De gemeenteraad heeft ingestemd met een veilig, vrijliggend fietspad
+    langs de Hoofdstraat — een langgekoesterde wens van Progressief Baarn
+    en vele inwoners.
+  url: "#"
+
+- titel: Investering in schakelklassen voor nieuwkomers
+  datum: 2026-03-07
+  categorie: onderwijs
+  uitgelicht: false
+  icoon: "📚"
+  kleur: "donker"
+  intro: >
+    Progressief Baarn heeft succesvol gepleit voor meer middelen voor
+    schakelklassen, zodat kinderen van nieuwkomers sneller kunnen
+    integreren en meedoen op school.
+  url: "#"
+
+- titel: Zonnepanelen op gemeentelijke gebouwen aangenomen
+  datum: 2026-02-28
+  categorie: klimaat
+  uitgelicht: false
+  icoon: "☀️"
+  kleur: "groen"
+  intro: >
+    Op initiatief van Progressief Baarn worden alle gemeentelijke gebouwen
+    voorzien van zonnepanelen. De opbrengst ondersteunt kwetsbare huishoudens
+    met energiekosten.
+  url: "#"
+
+- titel: Progressief Baarn vraagt meer transparantie in inkoop
+  datum: 2026-02-20
+  categorie: bestuur
+  uitgelicht: false
+  icoon: "🏛️"
+  kleur: "donker"
+  intro: >
+    De fractie heeft een motie ingediend voor een jaarlijks transparantieverslag
+    over gemeentelijke aanbestedingen en subsidies. "Belastinggeld
+    verdient verantwoording."
+  url: "#"
+
+- titel: Anti-speculatiebeding bij gemeentelijke grondverkopen
+  datum: 2026-02-12
+  categorie: wonen
+  uitgelicht: false
+  icoon: "🔑"
+  kleur: "rood"
+  intro: >
+    Progressief Baarn heeft er voor gezorgd dat bij toekomstige
+    grondverkopen een anti-speculatiebeding wordt opgenomen om
+    huizenprijzen beheersbaar te houden.
+  url: "#"
+
+- titel: Nieuw mantelzorgcafé dankzij gemeentelijke subsidie
+  datum: 2026-02-05
+  categorie: zorg
+  uitgelicht: false
+  icoon: "🤝"
+  kleur: "donker"
+  intro: >
+    Dankzij een succesvolle lobby van Progressief Baarn ontvangen
+    mantelzorgers in Baarn extra ondersteuning via een nieuw inloopcentrum
+    in het centrum.
+  url: "#"
