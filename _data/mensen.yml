@@ -12,8 +12,8 @@ raadsleden:
     functie: Fractievoorzitter & Raadslid
     partij: sd
     portefeuilles:
-      - bestuur
-      - financien
+      - communicatie
+      - ons-baarn
       - wonen
     bio: >
       Mark is fractievoorzitter van Sociaal Democraten Baarn en zet zich
@@ -27,13 +27,13 @@ raadsleden:
     functie: Raadslid
     partij: sd
     portefeuilles:
-      - zorg
-      - onderwijs
-      - inclusie
+      - welzijn-preventie
+      - ons-baarn
     bio: >
-      Marjolijn is raadslid met een achtergrond in de zorg en het
-      onderwijs. Ze pleit voor toegankelijke zorg voor iedereen en gelijke
-      kansen voor alle kinderen in Baarn, ongeacht hun achtergrond.
+      Marjolijn is raadslid met een achtergrond in de zorg. Ze pleit voor
+      toegankelijke zorg voor iedereen en preventief beleid dat problemen
+      aanpakt voordat ze escaleren. Ze is het aanspreekpunt voor welzijn
+      en zorg in de Baarnse raad.
     email: m.vandijk@baarn.nl
     foto:
 
@@ -41,13 +41,13 @@ raadsleden:
     functie: Raadslid
     partij: sd
     portefeuilles:
-      - klimaat
-      - ruimtelijke-ordening
-      - mobiliteit
+      - energietransitie
+      - duurzaamheid-natuur
     bio: >
-      Sandra is raadslid en zet zich in voor een duurzaam Baarn met
-      goede fietspaden, bereikbaar openbaar vervoer en een klimaatbeleid
-      dat ook mensen met een kleine beurs bereikt.
+      Sandra is raadslid en zet zich in voor een duurzaam Baarn. Ze volgt
+      de energietransitie op de voet en zorgt dat ook huurders en mensen
+      met een lager inkomen kunnen profiteren van duurzame energie en
+      betere isolatie.
     email: s.bruijstens@baarn.nl
     foto:
 
@@ -56,12 +56,12 @@ raadsleden:
     partij: sd
     portefeuilles:
       - wonen
-      - financien
-      - bestuur
+      - communicatie
     bio: >
-      Valentijn is raadslid en richt zich op betaalbaar wonen en eerlijk
-      bestuur. Hij stelt kritische vragen over de gemeentebegroting en
-      zorgt dat belastinggeld van inwoners goed wordt besteed.
+      Valentijn is raadslid en richt zich op betaalbaar wonen en eerlijke
+      communicatie met inwoners. Hij stelt kritische vragen over
+      nieuwbouwplannen en zorgt dat bewoners tijdig worden betrokken bij
+      beslissingen die hun wijk raken.
     email: v.brinkman@baarn.nl
     foto:
 
@@ -69,13 +69,13 @@ raadsleden:
     functie: Raadslid
     partij: sd
     portefeuilles:
-      - inclusie
-      - onderwijs
-      - zorg
+      - welzijn-preventie
+      - communicatie
     bio: >
       Hind is raadslid en trekt zich het lot aan van alle Baarnaars die
-      zich buitengesloten voelen. Ze strijdt voor gelijke behandeling op
-      de arbeids- en woningmarkt en voor een inclusieve gemeente.
+      zich buitengesloten voelen. Ze strijdt voor gelijke behandeling,
+      toegankelijke hulpverlening en een gemeente die iedereen bereikt —
+      ook mensen die zichzelf niet luid laten horen.
     email: h.neggaoui@baarn.nl
     foto:
 

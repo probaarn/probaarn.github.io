@@ -1,170 +1,151 @@
 # ────────────────────────────────────────────────
-# DOSSIERS — bewerk dit bestand om dossiers te
-# beheren. De 'id' koppelt personen aan dossiers
-# via mensen.yml.
+# DOSSIERS — de zes officiële thema's van
+# Sociaal Democraten Baarn (baarn.pvda.nl/themas/)
+#
+# De 'id' koppelt personen aan dossiers via mensen.yml
 # ────────────────────────────────────────────────
 
-- id: klimaat
-  naam: Klimaat & Duurzaamheid
-  icoon: "🌱"
-  kleur: groen
+- id: communicatie
+  naam: Communicatie met inwoners
+  icoon: "💬"
+  kleur: rood
   omschrijving: >
-    Baarn in 2040 klimaatneutraal. We investeren in zonne-energie,
-    warmtepompen voor huurwoningen, groene daken en klimaatadaptieve
-    inrichting van de openbare ruimte. Een gemeentelijk energiefonds
-    helpt inwoners met verduurzaming — ook als zij weinig geld hebben.
+    Politiek begint bij luisteren. Wij praten niet óver inwoners
+    maar mét hen. Bewoners van Baarn moeten echte invloed hebben
+    op beslissingen die hun wijk en leven raken.
   uitgebreid: >
-    Klimaatverandering is de grootste uitdaging van onze tijd.
-    Progressief Baarn wil dat Baarn in 2040 klimaatneutraal is —
-    tien jaar eerder dan het landelijke plan. Meer bomen, minder
-    asfalt, meer groen in de wijken en serieuze investeringen in
-    hernieuwbare energie voor alle inwoners.
+    Sociaal Democraten Baarn gelooft dat goed bestuur begint bij
+    oprechte communicatie. Wij gaan de wijken in, organiseren
+    bewonersavonden en zorgen dat gemeentelijke plannen worden
+    uitgelegd op een manier die mensen begrijpen. Participatie
+    betekent voor ons: mensen serieus nemen, hun wensen opnemen
+    in beslissingen en altijd terugkoppelen wat er met hun input
+    is gedaan. Een wethouder of raadslid die luistert, is meer
+    waard dan één die alleen zichzelf hoort spreken.
   tags:
-    - Energietransitie
-    - Klimaatadaptatie
+    - Burgerparticipatie
+    - Transparantie
+    - Wijkoverleg
+    - Toegankelijk bestuur
+
+- id: ons-baarn
+  naam: Ons Baarn
+  icoon: "🏡"
+  kleur: rood
+  omschrijving: >
+    Baarn is een bijzondere gemeente. Wij staan voor een leefbaar,
+    sociaal en veilig Baarn waar alle inwoners zich thuis voelen —
+    van de Brink tot Lage Vuursche en Eembrugge.
+  uitgebreid: >
+    Ons Baarn is meer dan een mooie gemeente met monumentale
+    villa's en bossen. Het is ook de wijk Baarn-Noord, de Brink
+    als ontmoetingsplek, de kleine kernen Lage Vuursche en
+    Eembrugge. Wij willen dat alle inwoners meedoen aan het
+    gemeenschapsleven: jong en oud, nieuwkomer en geboren
+    Baarnenaar. Dat vraagt investering in ontmoetingsplekken,
+    een levendige Brink, goede voorzieningen in alle kernen en
+    een gemeente die oog heeft voor wie buiten de boot dreigt te vallen.
+  tags:
+    - Leefbaarheid
+    - Gemeenschap
+    - Brink
+    - Lage Vuursche
+    - Eembrugge
+
+- id: energietransitie
+  naam: Energietransitie
+  icoon: "⚡"
+  kleur: rood
+  omschrijving: >
+    De overstap naar duurzame energie is onontkoombaar. Wij willen
+    dat Baarn die transitie eerlijk en betaalbaar maakt — ook voor
+    mensen met een smalle beurs.
+  uitgebreid: >
+    De energietransitie is de grootste uitdaging van onze generatie.
+    Sociaal Democraten Baarn wil dat Baarn haar steentje bijdraagt
+    met zonnepanelen op gemeentelijke gebouwen, ondersteuning voor
+    huurders bij warmtepompen en isolatie, en een lokaal energiefonds
+    voor inwoners die de overstap zelf niet kunnen betalen. De
+    energietransitie mag geen privilege worden van mensen met een
+    koopwoning en een goed inkomen. Wij zorgen dat ook kwetsbare
+    huishoudens kunnen profiteren van lagere energierekeningen.
+  tags:
+    - Zonne-energie
+    - Warmtepompen
+    - Isolatie
+    - Energiefonds
+    - Huurders
+
+- id: duurzaamheid-natuur
+  naam: Duurzaamheid & Natuur
+  icoon: "🌿"
+  kleur: rood
+  omschrijving: >
+    Baarn heeft prachtige natuur en groen. Dat bewaren wij voor
+    toekomstige generaties — en we breiden het uit met meer
+    biodiversiteit in de wijken en klimaatadaptieve inrichting.
+  uitgebreid: >
+    Het Baarnse Bos, de landgoederen en de natuur rondom Lage
+    Vuursche zijn een rijkdom die we moeten koesteren. Maar
+    duurzaamheid gaat verder dan behoud: wij willen meer bomen
+    in de straten, minder verharding, groene daken en een
+    openbare ruimte die klaar is voor de hitte en regenbuien van
+    de toekomst. Biodiversiteit begint in de eigen achtertuin en
+    op gemeentelijk groen. Elke wijk in Baarn verdient meer groen,
+    meer schaduw en meer ruimte voor dieren en planten.
+  tags:
     - Biodiversiteit
-    - Duurzame Energie
+    - Klimaatadaptatie
+    - Baarnse Bos
+    - Groene wijken
+    - Duurzaam bouwen
 
 - id: wonen
-  naam: Betaalbaar Wonen
+  naam: Wonen
   icoon: "🏠"
   kleur: rood
   omschrijving: >
-    Meer sociale huurwoningen, woningen voor starters en
-    het tegengaan van speculatie op de woningmarkt.
-    Bij elke nieuwbouw: minimaal 30% sociale huur.
+    Een woning in Baarn moet bereikbaar zijn voor starters en
+    mensen met een middeninkomen. Wij strijden tegen speculatie
+    en pleiten voor meer sociale huur bij elke nieuwbouw.
   uitgebreid: >
-    Wonen is een recht, geen luxe. In Baarn zijn woningen
-    nauwelijks betaalbaar voor starters en mensen met een middeninkomen.
-    We pleiten voor anti-speculatiebedingen bij grondverkopen en
-    betere prestatieafspraken met woningcorporaties.
+    Wonen is een recht, geen luxe. In Baarn zijn de woningprijzen
+    zo hoog opgelopen dat starters, leraren, verpleegkundigen en
+    mensen met een middeninkomen nauwelijks nog een woning kunnen
+    vinden. Sociaal Democraten Baarn pleit voor anti-speculatie­
+    bedingen bij gemeentelijke grondverkopen, een minimumeis van
+    30% sociale huur bij nieuwbouw en actieve samenwerking met
+    woningcorporaties. Elk jaar dat we niets doen, wordt de
+    woningnood groter. Wij kiezen voor daadkracht.
   tags:
-    - Sociale Huur
-    - Starterswoningen
+    - Sociale huur
+    - Starters
     - Anti-speculatie
-    - Corporaties
+    - Woningcorporaties
+    - Betaalbaar wonen
 
-- id: zorg
-  naam: Zorg & Welzijn
+- id: welzijn-preventie
+  naam: Welzijn & Preventie
   icoon: "❤️"
   kleur: rood
   omschrijving: >
-    Goede en toegankelijke zorg voor iedereen. Geen bezuinigingen
-    op jeugdzorg en langdurige zorg. Mantelzorgers verdienen
-    meer ondersteuning en waardering.
+    Goede zorg en welzijn voor alle inwoners van Baarn. Investeer
+    in preventie zodat problemen worden voorkomen voordat ze
+    escaleren. Geen bezuinigingen op de meest kwetsbare mensen.
   uitgebreid: >
-    We willen buurtcoaches die mensen proactief opzoeken,
-    meer ontmoetingsplekken voor ouderen en een gemeentelijke
-    bijdrage aan preventieve gezondheidsprojecten. Jeugdzorg
-    snijden raakt de meest kwetsbare kinderen.
+    Sociaal Democraten Baarn gelooft in een gemeente die er is
+    voor haar inwoners — zeker voor wie het moeilijk heeft.
+    Dat betekent: buurtcoaches die proactief ondersteuning bieden,
+    inloopcentra voor ouderen en mantelzorgers, en goede jeugdzorg
+    zonder wachtlijsten. Preventie is altijd goedkoper dan
+    behandeling. Wij willen investeren in vroegsignalering van
+    armoede, psychische problemen en huiselijk geweld, zodat
+    mensen tijdig de hulp krijgen die ze nodig hebben. Bezuinigen
+    op zorg raakt altijd de mensen die al het minst hebben.
   tags:
     - Jeugdzorg
-    - Ouderenzorg
     - Mantelzorg
-    - GGZ
     - Preventie
-
-- id: onderwijs
-  naam: Onderwijs & Gelijke Kansen
-  icoon: "📚"
-  kleur: groen
-  omschrijving: >
-    Investeren in goed onderwijs en gelijke kansen,
-    zodat elk kind in Baarn kan opbloeien.
-    Armoede mag geen belemmering zijn voor deelname.
-  uitgebreid: >
-    We willen gratis schoolmaaltijden, vergoeding van schoolspullen
-    en een lokaal armoedefonds voor gezinnen. Schakelklassen voor
-    nieuwkomers zorgen dat kinderen snel kunnen meedoen.
-    Gelijke kansen beginnen bij goede voor- en vroegschoolse educatie.
-  tags:
-    - VVE
-    - Gelijke Kansen
-    - Kinderarmoede
-    - Schakelklassen
-
-- id: mobiliteit
-  naam: Mobiliteit & Openbaar Vervoer
-  icoon: "🚲"
-  kleur: groen
-  omschrijving: >
-    Veilige fietspaden, beter OV en minder autoverkeer
-    in de woonwijken van Baarn.
-  uitgebreid: >
-    We pleiten voor een gratis OV-abonnement voor 65-plussers,
-    een gemeentelijk deelfietssysteem en vrijliggende fietspaden
-    langs alle hoofdwegen. Parkeerbeleid moet de fiets en het OV
-    stimuleren, niet de auto.
-  tags:
-    - Fietspaden
-    - Openbaar Vervoer
-    - Deelmobiliteit
-    - Verkeersveiligheid
-
-- id: inclusie
-  naam: Inclusie & Diversiteit
-  icoon: "🌍"
-  kleur: groen
-  omschrijving: >
-    Een Baarn waar iedereen welkom is en gelijk behandeld wordt,
-    ongeacht achtergrond, beperking of identiteit.
-  uitgebreid: >
-    We willen een gemeentelijke diversiteitscommissie, toegankelijkere
-    gemeentelijke gebouwen en activiteiten die mensen uit alle culturen
-    samenbrengen. Discriminatie op de woningmarkt en arbeidsmarkt
-    wordt actief bestreden.
-  tags:
-    - Toegankelijkheid
-    - LGBTQ+
-    - Integratie
-    - Anti-discriminatie
-
-- id: financien
-  naam: Financiën & Eerlijk Bestuur
-  icoon: "📊"
-  kleur: rood
-  omschrijving: >
-    Transparante gemeente­financiën en eerlijk bestuur.
-    Belastinggeld van inwoners verdient volledige verantwoording.
-  uitgebreid: >
-    We pleiten voor een jaarlijks transparantieverslag over
-    aanbestedingen en subsidies. De gemeente moet een eerlijk
-    inkoopbeleid voeren dat lokale ondernemers kansen geeft.
-  tags:
-    - Transparantie
-    - Eerlijk Bestuur
-    - Lokale Economie
-
-- id: ruimtelijke-ordening
-  naam: Ruimtelijke Ordening
-  icoon: "🗺️"
-  kleur: groen
-  omschrijving: >
-    Een groene, goed ingerichte gemeente waar wonen,
-    werken en recreëren samengaan in een leefbare omgeving.
-  uitgebreid: >
-    We werken aan een omgevingsvisie die natuur en groen
-    centraal stelt. Baarn moet zijn groene karakter behouden
-    bij elke nieuwbouwontwikkeling. Meer parken, minder
-    verharding, meer biodiversiteit in de wijken.
-  tags:
-    - Omgevingsvisie
-    - Groen
-    - Natuur
-    - Erfgoed
-
-- id: bestuur
-  naam: Democratie & Bestuur
-  icoon: "🏛️"
-  kleur: rood
-  omschrijving: >
-    Een open en democratisch gemeentebestuur dat inwoners
-    serieus neemt en betrekt bij besluitvorming.
-  uitgebreid: >
-    We willen meer burgerparticipatie, een sterker rekenkameronderzoek
-    en een gemeentelijk ombudsman die laagdrempelig bereikbaar is.
-    Inwoners moeten echte invloed hebben op hun wijk.
-  tags:
-    - Participatie
-    - Transparantie
-    - Rekenkamer
+    - GGZ
+    - Armoede
+    - Huiselijk geweld
