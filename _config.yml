@@ -1,17 +1,17 @@
-title: Progressief Baarn
-description: De lokale samenwerking van PvdA en GroenLinks in de gemeente Baarn
+title: Sociaal Democraten Baarn
+description: De sociaal-democratische partij van Baarn. Voor een rechtvaardige, sociale en toegankelijke gemeente.
 url: "https://probaarn.github.io"
 baseurl: ""
 
 # Auteur / contact
-email: info@progressiefbaarn.nl
+email: info@sdbaarn.nl
 telefoon: "035 542 0000"
 adres: "Laanstraat 1, 3743 BS Baarn"
 
-# Sociale media (vul in zodra beschikbaar)
+# Sociale media
 social:
   twitter: ""
-  facebook: ""
+  facebook: "https://www.facebook.com/pvdabaarn"
   instagram: ""
   linkedin: ""
 

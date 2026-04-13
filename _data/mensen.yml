@@ -1,121 +1,108 @@
 # ────────────────────────────────────────────────
-# MENSEN — voeg hier raadsleden, wethouders en
-# bestuursleden toe.
+# MENSEN — raadsleden en bestuursleden van
+# Sociaal Democraten Baarn.
 #
 # portefeuilles: gebruik de 'id' uit dossiers.yml
-# partij: 'pvda' of 'gl'
 # foto: bestandsnaam in assets/fotos/ (of leeg laten)
+# Foto's zijn beschikbaar via baarn.pvda.nl/wieiswie/
 # ────────────────────────────────────────────────
 
 raadsleden:
-  - naam: Thomas Bakker
+  - naam: Mark Eijbaard
     functie: Fractievoorzitter & Raadslid
-    partij: pvda
+    partij: sd
     portefeuilles:
-      - financien
       - bestuur
+      - financien
+      - wonen
     bio: >
-      Thomas is fractievoorzitter en zet zich al jaren in voor transparant
-      gemeentebestuur en gezonde gemeentefinanciën. Hij is betrokken bij
-      diverse maatschappelijke organisaties in Baarn.
-    email: t.bakker@baarn.nl
+      Mark is fractievoorzitter van Sociaal Democraten Baarn en zet zich
+      al jaren in voor sociale rechtvaardigheid, betaalbaar wonen en een
+      transparant gemeentebestuur. Hij is nauw betrokken bij de Baarnse
+      samenleving en spreekt bewoners aan op straat én in de raadszaal.
+    email: m.eijbaard@baarn.nl
     foto:
 
-  - naam: Sara Jansen
+  - naam: Marjolijn van Dijk
     functie: Raadslid
-    partij: gl
+    partij: sd
     portefeuilles:
+      - zorg
       - onderwijs
       - inclusie
     bio: >
-      Sara is onderwijzeres en zet haar kennis in voor beter onderwijs en
-      meer kansen voor jongeren in Baarn. Actief in de buurtvereniging
-      Baarn-Noord.
-    email: s.jansen@baarn.nl
+      Marjolijn is raadslid met een achtergrond in de zorg en het
+      onderwijs. Ze pleit voor toegankelijke zorg voor iedereen en gelijke
+      kansen voor alle kinderen in Baarn, ongeacht hun achtergrond.
+    email: m.vandijk@baarn.nl
     foto:
 
-  - naam: Pieter van Dam
+  - naam: Sandra Bruijstens
     functie: Raadslid
-    partij: pvda
+    partij: sd
     portefeuilles:
-      - zorg
-      - mobiliteit
-    bio: >
-      Pieter werkt als maatschappelijk werker en kent de uitdagingen in
-      de zorg van binnenuit. Hij pleit voor toegankelijke zorg en goede
-      ondersteuning van mantelzorgers.
-    email: p.vandam@baarn.nl
-    foto:
-
-  - naam: Mies de Groot
-    functie: Raadslid
-    partij: gl
-    portefeuilles:
+      - klimaat
       - ruimtelijke-ordening
       - mobiliteit
-      - klimaat
     bio: >
-      Mies is stedenbouwkundige en zet zich in voor een goed ingerichte
-      openbare ruimte, veilige fietsinfrastructuur en duurzame
-      mobiliteitsoplossingen voor Baarn.
-    email: m.degroot@baarn.nl
+      Sandra is raadslid en zet zich in voor een duurzaam Baarn met
+      goede fietspaden, bereikbaar openbaar vervoer en een klimaatbeleid
+      dat ook mensen met een kleine beurs bereikt.
+    email: s.bruijstens@baarn.nl
     foto:
 
-wethouder:
-  - naam: Anna de Vries
-    functie: Wethouder
-    partij: gl
+  - naam: Valentijn Brinkman
+    functie: Raadslid
+    partij: sd
     portefeuilles:
-      - klimaat
       - wonen
-      - ruimtelijke-ordening
+      - financien
+      - bestuur
     bio: >
-      Anna de Vries is de wethouder van Progressief Baarn. Als voormalig
-      milieu-ingenieur brengt zij jarenlange expertise mee op het gebied van
-      duurzaamheid en klimaatbeleid. Zij zet zich in voor een ambitieus
-      klimaatprogramma, meer betaalbare woningen en een groene leefomgeving.
-    email: a.devries@baarn.nl
-    spreekuur: "Elke dinsdag 15:00–16:30 uur, Gemeentehuis Baarn"
+      Valentijn is raadslid en richt zich op betaalbaar wonen en eerlijk
+      bestuur. Hij stelt kritische vragen over de gemeentebegroting en
+      zorgt dat belastinggeld van inwoners goed wordt besteed.
+    email: v.brinkman@baarn.nl
+    foto:
+
+  - naam: Hind Neggaoui
+    functie: Raadslid
+    partij: sd
+    portefeuilles:
+      - inclusie
+      - onderwijs
+      - zorg
+    bio: >
+      Hind is raadslid en trekt zich het lot aan van alle Baarnaars die
+      zich buitengesloten voelen. Ze strijdt voor gelijke behandeling op
+      de arbeids- en woningmarkt en voor een inclusieve gemeente.
+    email: h.neggaoui@baarn.nl
     foto:
 
 bestuur:
-  - naam: Klaas Mulder
+  - naam: Svenja de Groot
     functie: Voorzitter
-    partij: pvda
+    partij: sd
     bio: >
-      Klaas leidt de partij en is verantwoordelijk voor de samenwerking
-      tussen PvdA en GroenLinks in Baarn. Jarenlange ervaring in lokale
-      politiek.
+      Svenja leidt het bestuur van Sociaal Democraten Baarn en zorgt
+      voor de interne organisatie, de samenwerking met de fractie en
+      de verbinding met leden en sympathisanten.
     foto:
 
-  - naam: Inge Smit
+  - naam: Hans Witsenboer
     functie: Secretaris
-    partij: gl
+    partij: sd
     bio: >
-      Inge verzorgt de communicatie van Progressief Baarn, beheert het
-      ledenbestand en organiseert ledenvergaderingen en evenementen.
+      Hans verzorgt de communicatie van Sociaal Democraten Baarn,
+      beheert het ledenbestand en organiseert ledenvergaderingen
+      en bijeenkomsten.
     foto:
 
-  - naam: Roel Vermeer
+  - naam: Willy Swinkels
     functie: Penningmeester
-    partij: pvda
+    partij: sd
     bio: >
-      Roel beheert de financiën en zorgt voor een transparante
-      verantwoording van inkomsten en uitgaven.
-    foto:
-
-  - naam: Farah El Amrani
-    functie: Bestuurslid Campagne
-    partij: gl
-    bio: >
-      Farah is verantwoordelijk voor campagneactiviteiten en
-      werft nieuwe leden voor PvdA en GroenLinks in Baarn.
-    foto:
-
-  - naam: Jan Hoekstra
-    functie: Bestuurslid Programma & Beleid
-    partij: pvda
-    bio: >
-      Jan werkt aan inhoudelijke programma's en beleidsstandpunten
-      en ondersteunt de fractie met inhoudelijk advies.
+      Willy beheert de financiën van de partij en zorgt voor een
+      transparante verantwoording van inkomsten en uitgaven aan
+      leden en donateurs.
     foto:

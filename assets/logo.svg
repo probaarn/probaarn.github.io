@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Sociaal Democraten Baarn logo">
+  <!-- Achtergrond cirkel -->
+  <circle cx="100" cy="100" r="97" fill="#1A1A1A"/>
+  <!-- Rode rand -->
+  <circle cx="100" cy="100" r="97" fill="none" stroke="#CC0000" stroke-width="5"/>
+
+  <!-- Naald van Waterloo — strak silhouet rechtsonder, subtiel -->
+  <g opacity="0.22" fill="white">
+    <!-- Punt -->
+    <polygon points="148,44 145,52 151,52"/>
+    <!-- Bovenste schacht -->
+    <polygon points="145,52 151,52 152,78 144,78"/>
+    <!-- Onderste schacht -->
+    <polygon points="144,78 152,78 153,108 143,108"/>
+    <!-- Voetstuk -->
+    <rect x="140" y="108" width="16" height="7" rx="1"/>
+    <!-- Onderste basis -->
+    <rect x="137" y="115" width="22" height="5" rx="1"/>
+  </g>
+
+  <!-- ROOS — 5 blaadbladeren (heraldisch, open bloem) -->
+  <g transform="translate(90,88)">
+    <!-- 5 buitenste blaadbladeren, wit met rode tint -->
+    <ellipse cx="0" cy="-30" rx="14" ry="22" fill="white" opacity="0.95" transform="rotate(0)"/>
+    <ellipse cx="0" cy="-30" rx="14" ry="22" fill="white" opacity="0.95" transform="rotate(72)"/>
+    <ellipse cx="0" cy="-30" rx="14" ry="22" fill="white" opacity="0.95" transform="rotate(144)"/>
+    <ellipse cx="0" cy="-30" rx="14" ry="22" fill="white" opacity="0.95" transform="rotate(216)"/>
+    <ellipse cx="0" cy="-30" rx="14" ry="22" fill="white" opacity="0.95" transform="rotate(288)"/>
+
+    <!-- 5 kleine binnenste blaadjes (op de tussenruimten) -->
+    <ellipse cx="0" cy="-18" rx="7" ry="11" fill="#FFCCCC" opacity="0.9" transform="rotate(36)"/>
+    <ellipse cx="0" cy="-18" rx="7" ry="11" fill="#FFCCCC" opacity="0.9" transform="rotate(108)"/>
+    <ellipse cx="0" cy="-18" rx="7" ry="11" fill="#FFCCCC" opacity="0.9" transform="rotate(180)"/>
+    <ellipse cx="0" cy="-18" rx="7" ry="11" fill="#FFCCCC" opacity="0.9" transform="rotate(252)"/>
+    <ellipse cx="0" cy="-18" rx="7" ry="11" fill="#FFCCCC" opacity="0.9" transform="rotate(324)"/>
+
+    <!-- Hart van de roos -->
+    <circle cx="0" cy="0" r="11" fill="#CC0000"/>
+    <circle cx="0" cy="0" r="7"  fill="#990000"/>
+    <!-- Meeldraden -->
+    <circle cx="-3" cy="-3" r="1.8" fill="#FFCCCC"/>
+    <circle cx=" 3" cy="-3" r="1.8" fill="#FFCCCC"/>
+    <circle cx=" 0" cy=" 4" r="1.8" fill="#FFCCCC"/>
+
+    <!-- Kelkbladeren (sepalen) tussen de buitenste blaadjes -->
+    <polygon points="0,-13 -2,-20  2,-20" fill="#2D2D2D" opacity="0.25" transform="rotate(36)"/>
+    <polygon points="0,-13 -2,-20  2,-20" fill="#2D2D2D" opacity="0.25" transform="rotate(108)"/>
+    <polygon points="0,-13 -2,-20  2,-20" fill="#2D2D2D" opacity="0.25" transform="rotate(180)"/>
+    <polygon points="0,-13 -2,-20  2,-20" fill="#2D2D2D" opacity="0.25" transform="rotate(252)"/>
+    <polygon points="0,-13 -2,-20  2,-20" fill="#2D2D2D" opacity="0.25" transform="rotate(324)"/>
+
+    <!-- Stengel -->
+    <line x1="0" y1="12" x2="0" y2="40" stroke="#CC0000" stroke-width="3" stroke-linecap="round"/>
+    <!-- Linkerblad -->
+    <ellipse cx="-9" cy="27" rx="7" ry="12" fill="#CC0000" opacity="0.65" transform="rotate(-40 -9 27)"/>
+    <!-- Rechterblad -->
+    <ellipse cx=" 9" cy="30" rx="7" ry="12" fill="#CC0000" opacity="0.65" transform="rotate(40 9 30)"/>
+  </g>
+
+  <!-- Tekst: SOCIAAL DEMOCRATEN -->
+  <text x="100" y="163"
+        font-family="'Barlow Condensed','Arial Narrow',Arial,sans-serif"
+        font-weight="700"
+        font-size="9"
+        fill="#CC0000"
+        text-anchor="middle"
+        letter-spacing="2.5">SOCIAAL DEMOCRATEN</text>
+
+  <!-- Tekst: BAARN -->
+  <text x="100" y="179"
+        font-family="'Barlow Condensed','Arial Narrow',Arial,sans-serif"
+        font-weight="900"
+        font-size="19"
+        fill="white"
+        text-anchor="middle"
+        letter-spacing="5">BAARN</text>
+</svg>

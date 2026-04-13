@@ -1,11 +1,11 @@
 ---
 layout: default
 title: Contact
-description: Neem contact op met Progressief Baarn. We staan altijd open voor vragen, ideeën of meldingen van inwoners van Baarn.
+description: Neem contact op met Sociaal Democraten Baarn. We staan altijd open voor vragen, ideeën of meldingen van inwoners van Baarn.
 ---
 
 <header class="pagina-header">
-  <img src="{{ '/assets/logo.webp' | relative_url }}" alt="" class="pagina-header-roos" aria-hidden="true">
+  <img src="{{ '/assets/logo.svg' | relative_url }}" alt="" class="pagina-header-roos" aria-hidden="true">
   <div class="container pagina-header-binnen">
     <p class="sectie-label sectie-label--rood">In gesprek</p>
     <h1>Contact</h1>
@@ -59,7 +59,7 @@ description: Neem contact op met Progressief Baarn. We staan altijd open voor vr
           </div>
           <div class="formulier-toestemming">
             <input type="checkbox" id="toestemming" name="toestemming" required>
-            <label for="toestemming">Ik ga akkoord met het <a href="#" style="color: var(--groen); text-decoration: underline;">privacybeleid</a> van Progressief Baarn.</label>
+            <label for="toestemming">Ik ga akkoord met het <a href="#" style="color: var(--rood); text-decoration: underline;">privacybeleid</a> van Sociaal Democraten Baarn.</label>
           </div>
           <button type="submit" class="knop knop-primair" style="width: 100%; justify-content: center; padding: 1rem;">
             Bericht versturen →
@@ -111,22 +111,10 @@ description: Neem contact op met Progressief Baarn. We staan altijd open voor vr
           </div>
         </div>
 
-        {% for persoon in site.data.mensen.wethouder %}
-        {% if persoon.spreekuur %}
-        <div class="contact-item">
-          <div class="contact-icoon">🌿</div>
-          <div class="contact-tekst">
-            <strong>Spreekuur wethouder {{ persoon.naam }}</strong>
-            <span>{{ persoon.spreekuur }}</span>
-          </div>
-        </div>
-        {% endif %}
-        {% endfor %}
-
         <div style="margin-top: 2rem;">
           <p class="sectie-label sectie-label--donker">Volg ons</p>
           <div class="sociaal-links">
-            <a href="#" class="sociaal-link" aria-label="Facebook">f</a>
+            <a href="{{ site.social.facebook | default: '#' }}" class="sociaal-link" aria-label="Facebook">f</a>
             <a href="#" class="sociaal-link" aria-label="Twitter/X">𝕏</a>
             <a href="#" class="sociaal-link" aria-label="Instagram">▣</a>
             <a href="#" class="sociaal-link" aria-label="LinkedIn">in</a>
@@ -135,10 +123,9 @@ description: Neem contact op met Progressief Baarn. We staan altijd open voor vr
 
         <div class="lid-worden-blok">
           <p>Lid worden?</p>
-          <p style="font-size: 0.88rem; color: var(--mid); margin-bottom: 1.25rem; line-height: 1.6;">Steun onze partijen door lid te worden van PvdA of GroenLinks.</p>
+          <p style="font-size: 0.88rem; color: var(--mid); margin-bottom: 1.25rem; line-height: 1.6;">Steun Sociaal Democraten Baarn door lid te worden van de PvdA, onze moederpartij.</p>
           <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
             <a href="https://www.pvda.nl/word-lid/" target="_blank" rel="noopener" class="knop knop-primair" style="font-size: 0.8rem; padding: 0.65rem 1.25rem;">Word PvdA-lid</a>
-            <a href="https://groenlinks.nl/lid-worden" target="_blank" rel="noopener" class="knop knop-groen" style="font-size: 0.8rem; padding: 0.65rem 1.25rem;">Word GL-lid</a>
           </div>
         </div>
       </div>

@@ -1,15 +1,15 @@
 ---
 layout: default
 title: Mensen
-description: Maak kennis met de raadsleden, wethouder en bestuursleden van Progressief Baarn.
+description: Maak kennis met de raadsleden en bestuursleden van Sociaal Democraten Baarn.
 ---
 
 <header class="pagina-header">
-  <img src="{{ '/assets/logo.webp' | relative_url }}" alt="" class="pagina-header-roos" aria-hidden="true">
+  <img src="{{ '/assets/logo.svg' | relative_url }}" alt="" class="pagina-header-roos" aria-hidden="true">
   <div class="container pagina-header-binnen">
-    <p class="sectie-label sectie-label--rood">Progressief Baarn</p>
+    <p class="sectie-label sectie-label--rood">Sociaal Democraten Baarn</p>
     <h1>Ons team</h1>
-    <p>Maak kennis met de raadsleden, wethouder en bestuursleden die zich dagelijks inzetten voor een beter Baarn.</p>
+    <p>Maak kennis met de raadsleden en bestuursleden die zich dagelijks inzetten voor een beter, eerlijker en socialer Baarn.</p>
   </div>
 </header>
 
@@ -18,7 +18,6 @@ description: Maak kennis met de raadsleden, wethouder en bestuursleden van Progr
 
     <nav class="tab-nav" role="tablist">
       <button class="tab-knop actief" data-tab="raadsleden" role="tab">Raadsleden</button>
-      <button class="tab-knop" data-tab="wethouder" role="tab">Wethouder</button>
       <button class="tab-knop" data-tab="bestuur" role="tab">Bestuur</button>
     </nav>
 
@@ -27,7 +26,7 @@ description: Maak kennis met de raadsleden, wethouder en bestuursleden van Progr
       <div class="persoon-rooster-volledig">
         {% for persoon in site.data.mensen.raadsleden %}
         <article class="persoon-kaart-volledig">
-          <div class="persoon-foto-placeholder" style="background: linear-gradient(160deg, var(--groen-bg) 0%, var(--groen-kaart) 100%);">
+          <div class="persoon-foto-placeholder" style="background: linear-gradient(160deg, var(--rood-bg) 0%, var(--rood-kaart) 100%);">
             {% if persoon.foto %}
               <img src="{{ '/assets/fotos/' | append: persoon.foto | relative_url }}" alt="{{ persoon.naam }}">
             {% else %}
@@ -48,12 +47,10 @@ description: Maak kennis met de raadsleden, wethouder en bestuursleden van Progr
               {% endfor %}
             </div>
             {% endif %}
-            <span class="persoon-badge persoon-badge--{{ persoon.partij }}">
-              {% if persoon.partij == 'pvda' %}PvdA{% else %}GroenLinks{% endif %}
-            </span>
+            <span class="persoon-badge persoon-badge--sd">SD Baarn</span>
             {% if persoon.email %}
             <div style="margin-top: 0.75rem;">
-              <a href="mailto:{{ persoon.email }}" style="font-family: var(--font-ui); font-size: 0.82rem; color: var(--groen);">{{ persoon.email }}</a>
+              <a href="mailto:{{ persoon.email }}" style="font-family: var(--font-ui); font-size: 0.82rem; color: var(--rood);">{{ persoon.email }}</a>
             </div>
             {% endif %}
           </div>
@@ -62,73 +59,13 @@ description: Maak kennis met de raadsleden, wethouder en bestuursleden van Progr
       </div>
     </div>
 
-    <!-- WETHOUDER -->
-    <div id="wethouder" class="tab-inhoud">
-      {% for persoon in site.data.mensen.wethouder %}
-      <div class="wethouder-kaart">
-        <div class="persoon-foto-placeholder" style="background: linear-gradient(160deg, var(--roze-bg) 0%, var(--roze-kaart) 100%);">
-          {% if persoon.foto %}
-            <img src="{{ '/assets/fotos/' | append: persoon.foto | relative_url }}" alt="{{ persoon.naam }}">
-          {% else %}
-            👤
-          {% endif %}
-        </div>
-        <div class="persoon-info">
-          <p class="persoon-rol persoon-rol--wethouder">{{ persoon.functie }}</p>
-          <p class="persoon-naam" style="font-size: 2rem; margin-bottom: 0.5rem;">{{ persoon.naam }}</p>
-          <p class="persoon-bio" style="font-size: 0.95rem; line-height: 1.72; margin-top: 0.5rem;">{{ persoon.bio }}</p>
-          {% if persoon.portefeuilles %}
-          <div class="portefeuilles" style="margin-top: 1.25rem;">
-            {% for id in persoon.portefeuilles %}
-              {% assign dossier = site.data.dossiers | where: "id", id | first %}
-              {% if dossier %}
-                <span class="portefeuille-badge">{{ dossier.icoon }} {{ dossier.naam }}</span>
-              {% endif %}
-            {% endfor %}
-          </div>
-          {% endif %}
-          {% if persoon.spreekuur %}
-          <p style="font-family: var(--font-ui); font-size: 0.82rem; color: var(--mid); margin-top: 1rem;">
-            🕐 Spreekuur: {{ persoon.spreekuur }}
-          </p>
-          {% endif %}
-          <span class="persoon-badge persoon-badge--{{ persoon.partij }}" style="margin-top: 1.25rem;">
-            {% if persoon.partij == 'pvda' %}PvdA{% else %}GroenLinks{% endif %}
-          </span>
-          <div style="margin-top: 1.5rem;">
-            <a href="{{ '/contact' | relative_url }}" class="knop knop-primair" style="font-size: 0.82rem; padding: 0.7rem 1.4rem;">Neem contact op</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Portefeuille-dossiers uitgebreid -->
-      {% if persoon.portefeuilles %}
-      <div style="margin-top: 3.5rem;">
-        <h3 style="margin-bottom: 1.5rem;">Portefeuille</h3>
-        <div class="dossier-rooster">
-          {% for id in persoon.portefeuilles %}
-            {% assign dossier = site.data.dossiers | where: "id", id | first %}
-            {% if dossier %}
-            <div class="dossier-kaart {% if dossier.kleur == 'rood' %}dossier-kaart--rood{% endif %}">
-              <div class="dossier-icoon">{{ dossier.icoon }}</div>
-              <p class="dossier-titel">{{ dossier.naam }}</p>
-              <p class="dossier-omschrijving">{{ dossier.omschrijving | truncatewords: 25 }}</p>
-            </div>
-            {% endif %}
-          {% endfor %}
-        </div>
-      </div>
-      {% endif %}
-      {% endfor %}
-    </div>
-
     <!-- BESTUUR -->
     <div id="bestuur" class="tab-inhoud">
-      <p style="color: var(--mid); max-width: 600px; margin-bottom: 2rem;">Het bestuur van Progressief Baarn is verantwoordelijk voor de organisatie, ledenvergaderingen en campagne-activiteiten.</p>
+      <p style="color: var(--mid); max-width: 600px; margin-bottom: 2rem;">Het bestuur van Sociaal Democraten Baarn is verantwoordelijk voor de organisatie, ledenvergaderingen en activiteiten van de partij.</p>
       <div class="persoon-rooster-volledig">
         {% for persoon in site.data.mensen.bestuur %}
         <article class="persoon-kaart-volledig">
-          <div class="persoon-foto-placeholder" style="background: linear-gradient(160deg, var(--licht) 0%, var(--rand) 100%);">
+          <div class="persoon-foto-placeholder" style="background: linear-gradient(160deg, var(--grijs-bg) 0%, var(--grijs-kaart) 100%);">
             {% if persoon.foto %}
               <img src="{{ '/assets/fotos/' | append: persoon.foto | relative_url }}" alt="{{ persoon.naam }}">
             {% else %}
@@ -139,9 +76,7 @@ description: Maak kennis met de raadsleden, wethouder en bestuursleden van Progr
             <p class="persoon-rol">{{ persoon.functie }}</p>
             <p class="persoon-naam">{{ persoon.naam }}</p>
             <p class="persoon-bio">{{ persoon.bio }}</p>
-            <span class="persoon-badge persoon-badge--{{ persoon.partij }}">
-              {% if persoon.partij == 'pvda' %}PvdA{% else %}GroenLinks{% endif %}
-            </span>
+            <span class="persoon-badge persoon-badge--sd">SD Baarn</span>
           </div>
         </article>
         {% endfor %}
@@ -156,11 +91,10 @@ description: Maak kennis met de raadsleden, wethouder en bestuursleden van Progr
     <div class="cta-binnen">
       <p class="sectie-label sectie-label--wit">Meedoen</p>
       <h2>Wil jij ook een verschil maken?</h2>
-      <p>Sluit je aan bij Progressief Baarn als lid of vrijwilliger en help mee aan een beter Baarn.</p>
+      <p>Sluit je aan bij Sociaal Democraten Baarn als lid of vrijwilliger en help mee aan een beter Baarn.</p>
       <div class="cta-acties">
-        <a href="{{ '/contact' | relative_url }}" class="knop knop-primair">Neem contact op</a>
+        <a href="{{ '/contact' | relative_url }}" class="knop knop-omlijnd-wit">Neem contact op</a>
         <a href="https://www.pvda.nl/word-lid/" target="_blank" rel="noopener" class="knop knop-omlijnd-wit">Word PvdA-lid</a>
-        <a href="https://groenlinks.nl/lid-worden" target="_blank" rel="noopener" class="knop knop-omlijnd-wit">Word GL-lid</a>
       </div>
     </div>
   </div>

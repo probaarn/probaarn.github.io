@@ -1,115 +1,156 @@
 # ────────────────────────────────────────────────
-# NIEUWS — voeg hier nieuwsberichten toe.
-# categorie: klimaat | wonen | zorg | onderwijs |
-#            mobiliteit | bestuur | inclusie
+# NIEUWS — berichten van Sociaal Democraten Baarn
+# Gebaseerd op publicaties van baarn.pvda.nl
+#
+# categorie: bestuur | wonen | zorg | onderwijs |
+#            mobiliteit | klimaat | inclusie | financien
 # uitgelicht: true = groot kaartje op homepage
 # ────────────────────────────────────────────────
 
-- titel: Progressief Baarn wil ambitieuzer klimaatplan voor gemeente
-  datum: 2026-04-02
-  categorie: klimaat
+- titel: "Brief aan de informateur: Baarn verdient een rechtvaardig akkoord"
+  datum: 2026-03-27
+  categorie: bestuur
   uitgelicht: true
-  icoon: "🌱"
-  kleur: "groen"
+  icoon: "✉️"
+  kleur: "rood"
   intro: >
-    Progressief Baarn heeft in de gemeenteraad gepleit voor een versnelling
-    van het gemeentelijk klimaatbeleid. Baarn moet in 2040 klimaatneutraal
-    zijn, niet in 2050 zoals het college voorstelt. "We hebben geen tijd
-    te verliezen", aldus fractievoorzitter Thomas Bakker.
-  url: "#"
+    Sociaal Democraten Baarn heeft een brief gestuurd aan de informateur
+    voor de coalitieonderhandelingen 2026. Wij maken duidelijk wat wij
+    minimaal verwachten: eerlijk bestuur, betaalbaar wonen en geen
+    bezuinigingen op zorg en onderwijs.
+  url: "https://baarn.pvda.nl/nieuws/brief-aan-de-informateur-2026/"
 
-- titel: Meer sociale huurwoningen in Baarn-Noord
-  datum: 2026-03-28
+- titel: "Kiezen voor respect: onze visie op de Baarnse politiek"
+  datum: 2026-03-15
+  categorie: inclusie
+  uitgelicht: false
+  icoon: "🤝"
+  kleur: "rood"
+  intro: >
+    In tijden van polarisatie kiezen wij voor respect en dialoog.
+    SD Baarn wil een politieke cultuur die luistert naar inwoners
+    en beslissingen neemt met oog voor de gevolgen voor mensen.
+  url: "https://baarn.pvda.nl/nieuws/kiezen_voor_respect/"
+
+- titel: "Niet praten over maar met de wijk"
+  datum: 2026-03-11
+  categorie: bestuur
+  uitgelicht: false
+  icoon: "🏘️"
+  kleur: "donker"
+  intro: >
+    SD Baarn bezoekt wijken in Baarn om bewoners rechtstreeks te horen.
+    Participatie betekent voor ons: mensen serieus nemen, hun wensen
+    meenemen in beslissingen en terugkoppelen wat er met hun input
+    wordt gedaan.
+  url: "https://baarn.pvda.nl/nieuws/niet-praten-over-maar-met-de-wijk/"
+
+- titel: "Perspectief voor de toekomst: een mooie stap voor Baarn"
+  datum: 2026-01-29
+  categorie: bestuur
+  uitgelicht: false
+  icoon: "🌅"
+  kleur: "donker"
+  intro: >
+    Na intensieve gesprekken zijn er nieuwe afspraken gemaakt over
+    de toekomst van Baarn. SD Baarn reageert positief op de
+    uitkomsten en roept het nieuwe college op om woord te houden.
+  url: "https://baarn.pvda.nl/nieuws/perspectief-voor-de-toekomst-een-mooie-stap-voor-baarn/"
+
+- titel: "Een woning in Baarn moet bereikbaar worden voor starters"
+  datum: 2026-01-27
   categorie: wonen
   uitgelicht: false
   icoon: "🏠"
   kleur: "rood"
   intro: >
-    Na jarenlang lobbyen heeft Progressief Baarn een meerderheid gevonden
-    voor 80 nieuwe sociale huurwoningen in Baarn-Noord. Een historisch
-    besluit voor starters en mensen met een smalle beurs.
-  url: "#"
+    De woningnood in Baarn treft starters en mensen met een middeninkomen
+    het hardst. SD Baarn pleit voor doortastende maatregelen: meer sociale
+    huur, anti-speculatiebedingen en actieve inzet van gemeentegrond.
+  url: "https://baarn.pvda.nl/nieuws/een-woning-in-baarn-moet-bereikbaar-worden-voor-starters/"
 
-- titel: Vragen over bezuinigingen op jeugdzorg in Baarn
-  datum: 2026-03-21
+- titel: "Onze visie op de opvang in Baarn: rust en duidelijkheid"
+  datum: 2026-01-27
   categorie: zorg
   uitgelicht: false
   icoon: "❤️"
   kleur: "donker"
   intro: >
-    De fractie heeft schriftelijke vragen ingediend over de geplande
-    bezuinigingen op jeugdzorg. "Juist de kwetsbare kinderen worden
-    geraakt door dit beleid."
-  url: "#"
+    SD Baarn heeft een duidelijk standpunt over de opvang van kwetsbare
+    mensen in Baarn: met goede begeleiding, draagvlak in de buurt en
+    eerlijke communicatie met bewoners. Vluchtelingen en daklozen
+    verdienen een menswaardige aanpak.
+  url: "https://baarn.pvda.nl/nieuws/kiezen-voor-rust-en-duidelijkheid-onze-visie-op-de-opvang-in-baarn/"
 
-- titel: Nieuw fietspad langs Hoofdstraat goedgekeurd
-  datum: 2026-03-14
-  categorie: mobiliteit
+- titel: "Sfeervolle jaarwisseling op de Brink: veiligheid en ontmoeting"
+  datum: 2026-01-24
+  categorie: bestuur
   uitgelicht: false
-  icoon: "🚲"
-  kleur: "groen"
-  intro: >
-    De gemeenteraad heeft ingestemd met een veilig, vrijliggend fietspad
-    langs de Hoofdstraat — een langgekoesterde wens van Progressief Baarn
-    en vele inwoners.
-  url: "#"
-
-- titel: Investering in schakelklassen voor nieuwkomers
-  datum: 2026-03-07
-  categorie: onderwijs
-  uitgelicht: false
-  icoon: "📚"
+  icoon: "🎆"
   kleur: "donker"
   intro: >
-    Progressief Baarn heeft succesvol gepleit voor meer middelen voor
-    schakelklassen, zodat kinderen van nieuwkomers sneller kunnen
-    integreren en meedoen op school.
-  url: "#"
+    SD Baarn stelde mondelinge vragen over de jaarwisseling op de Brink
+    in Baarn. Wij pleiten voor een feest dat mensen samenbrengt, veilig
+    is voor iedereen en de omgeving respecteert.
+  url: "https://baarn.pvda.nl/raadsvragen/mondelinge-vragen/pvda-baarn-pleit-voor-sfeervolle-jaarwisseling-op-de-brink-rust-veiligheid-en-ontmoeting-centraal/"
 
-- titel: Zonnepanelen op gemeentelijke gebouwen aangenomen
-  datum: 2026-02-28
-  categorie: klimaat
+- titel: "Begroting 2026-2029: zuinig op geld, rijk aan vertrouwen"
+  datum: 2025-11-20
+  categorie: financien
   uitgelicht: false
-  icoon: "☀️"
-  kleur: "groen"
+  icoon: "📊"
+  kleur: "rood"
   intro: >
-    Op initiatief van Progressief Baarn worden alle gemeentelijke gebouwen
-    voorzien van zonnepanelen. De opbrengst ondersteunt kwetsbare huishoudens
-    met energiekosten.
-  url: "#"
+    SD Baarn presenteerde haar visie op de meerjarenbegroting: geen
+    onnodige bezuinigingen op zorg en onderwijs, maar ook een eerlijke
+    verantwoording van elke euro. Vertrouwen verdien je met transparantie.
+  url: "https://baarn.pvda.nl/nieuws/begroting-2026-2029-zuinig-op-geld-rijk-aan-vertrouwen/"
 
-- titel: Progressief Baarn vraagt meer transparantie in inkoop
-  datum: 2026-02-20
+- titel: "Schriftelijke vragen over geweld tegen vrouwen in Baarn"
+  datum: 2025-09-21
+  categorie: inclusie
+  uitgelicht: false
+  icoon: "✊"
+  kleur: "rood"
+  intro: >
+    SD Baarn diende schriftelijke vragen in over het gemeentelijk beleid
+    rondom huiselijk geweld en de opvang van slachtoffers. Elke vrouw
+    in Baarn verdient bescherming en een veilig thuis.
+  url: "https://baarn.pvda.nl/raadsvragen/schriftelijke-vragen/schriftelijke-vragen-over-geweld-tegen-vrouwen/"
+
+- titel: "Afscheid van steunfractielid Annet Krijgsman"
+  datum: 2025-09-16
+  categorie: bestuur
+  uitgelicht: false
+  icoon: "👋"
+  kleur: "donker"
+  intro: >
+    Na jaren van inzet voor SD Baarn neemt Annet Krijgsman afscheid
+    als steunfractielid. Wij zijn haar dankbaar voor haar bijdrage
+    aan de fractie en de Baarnse politiek.
+  url: "https://baarn.pvda.nl/nieuws/steunfractielid-annet-krijgsman-neemt-afscheid-van-fractie/"
+
+- titel: "Algemene beschouwingen: wees meer geïnteresseerd dan interessant"
+  datum: 2025-06-26
   categorie: bestuur
   uitgelicht: false
   icoon: "🏛️"
   kleur: "donker"
   intro: >
-    De fractie heeft een motie ingediend voor een jaarlijks transparantieverslag
-    over gemeentelijke aanbestedingen en subsidies. "Belastinggeld
-    verdient verantwoording."
-  url: "#"
+    Bij de algemene beschouwingen sprak SD Baarn over de houding van
+    de gemeenteraad tegenover burgers. Politiek moet luisteren, niet
+    zenden. Wij pleiten voor een raad die oprecht geïnteresseerd is
+    in de mensen die zij vertegenwoordigt.
+  url: "https://baarn.pvda.nl/nieuws/algemene-beschouwingen-wees-meer-geinteresseerd-dan-interessant/"
 
-- titel: Anti-speculatiebeding bij gemeentelijke grondverkopen
-  datum: 2026-02-12
-  categorie: wonen
-  uitgelicht: false
-  icoon: "🔑"
-  kleur: "rood"
-  intro: >
-    Progressief Baarn heeft er voor gezorgd dat bij toekomstige
-    grondverkopen een anti-speculatiebeding wordt opgenomen om
-    huizenprijzen beheersbaar te houden.
-  url: "#"
-
-- titel: Nieuw mantelzorgcafé dankzij gemeentelijke subsidie
-  datum: 2026-02-05
-  categorie: zorg
+- titel: "SD Baarn neemt verantwoordelijkheid: Baarn verdient stabiel bestuur"
+  datum: 2025-06-15
+  categorie: bestuur
   uitgelicht: false
   icoon: "🤝"
-  kleur: "donker"
+  kleur: "rood"
   intro: >
-    Dankzij een succesvolle lobby van Progressief Baarn ontvangen
-    mantelzorgers in Baarn extra ondersteuning via een nieuw inloopcentrum
-    in het centrum.
-  url: "#"
+    In een periode van politieke onzekerheid kiest SD Baarn voor
+    verantwoordelijkheid boven gemakkelijke oppositie. Stabiel
+    gemeentebestuur is in het belang van alle Baarnaars.
+  url: "https://baarn.pvda.nl/nieuws/pvda-neemt-verantwoordelijkheid-baarn-verdient-stabiel-bestuur/"

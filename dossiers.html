@@ -1,15 +1,15 @@
 ---
 layout: default
-title: Dossiers
-description: Onze standpunten over klimaat, wonen, zorg, onderwijs, mobiliteit en inclusie in Baarn.
+title: Standpunten
+description: Onze standpunten over wonen, zorg, onderwijs, klimaat, mobiliteit en goed bestuur in Baarn.
 ---
 
-<header class="pagina-header pagina-header--groen">
-  <img src="{{ '/assets/logo.webp' | relative_url }}" alt="" class="pagina-header-roos" aria-hidden="true">
+<header class="pagina-header">
+  <img src="{{ '/assets/logo.svg' | relative_url }}" alt="" class="pagina-header-roos" aria-hidden="true">
   <div class="container pagina-header-binnen">
-    <p class="sectie-label">Standpunten</p>
+    <p class="sectie-label sectie-label--rood">Standpunten</p>
     <h1>Dossiers</h1>
-    <p>Onze visie en standpunten over de thema's die er voor de inwoners van Baarn echt toe doen.</p>
+    <p>Onze visie en standpunten over de thema's die er voor de inwoners van Baarn werkelijk toe doen.</p>
   </div>
 </header>
 
@@ -36,17 +36,12 @@ description: Onze standpunten over klimaat, wonen, zorg, onderwijs, mobiliteit e
             {% assign gekoppeld = gekoppeld | push: persoon %}
           {% endif %}
         {% endfor %}
-        {% for persoon in site.data.mensen.wethouder %}
-          {% if persoon.portefeuilles contains dossier.id %}
-            {% assign gekoppeld = gekoppeld | push: persoon %}
-          {% endif %}
-        {% endfor %}
         {% if gekoppeld.size > 0 %}
         <div style="margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid var(--rand);">
           <p style="font-family: var(--font-ui); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--mid); margin-bottom: 0.6rem;">Woordvoerder{% if gekoppeld.size > 1 %}s{% endif %}</p>
           {% for persoon in gekoppeld %}
           <a href="{{ '/mensen' | relative_url }}" style="display: inline-flex; align-items: center; gap: 0.4rem; font-family: var(--font-ui); font-size: 0.85rem; font-weight: 600; color: var(--donker-mid); margin-right: 1rem;">
-            <span class="persoon-badge persoon-badge--{{ persoon.partij }}" style="margin: 0;">{% if persoon.partij == 'pvda' %}PvdA{% else %}GL{% endif %}</span>
+            <span class="persoon-badge persoon-badge--sd" style="margin: 0;">SD</span>
             {{ persoon.naam }}
           </a>
           {% endfor %}
@@ -67,7 +62,7 @@ description: Onze standpunten over klimaat, wonen, zorg, onderwijs, mobiliteit e
       <h2>Heb je vragen over onze standpunten?</h2>
       <p>Neem gerust contact op met onze fractie. We gaan graag in gesprek met inwoners van Baarn.</p>
       <div class="cta-acties">
-        <a href="{{ '/contact' | relative_url }}" class="knop knop-primair">Neem contact op</a>
+        <a href="{{ '/contact' | relative_url }}" class="knop knop-omlijnd-wit">Neem contact op</a>
         <a href="{{ '/nieuws' | relative_url }}" class="knop knop-omlijnd-wit">Lees ons nieuws</a>
       </div>
     </div>

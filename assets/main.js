@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const melding = document.querySelector('.melding-succes');
         if (melding) melding.style.display = 'block';
         verzendKnop.textContent = '✓ Verstuurd!';
-        verzendKnop.style.background = 'var(--groen)';
+        verzendKnop.style.background = 'var(--donker)';
 
         setTimeout(() => {
           contactFormulier.reset();

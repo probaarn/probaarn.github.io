@@ -1,15 +1,15 @@
 ---
 layout: default
 title: Nieuws
-description: Het laatste nieuws en persberichten van Progressief Baarn over lokale politiek in Baarn.
+description: Het laatste nieuws en persberichten van Sociaal Democraten Baarn over lokale politiek in Baarn.
 ---
 
 <header class="pagina-header">
-  <img src="{{ '/assets/logo.webp' | relative_url }}" alt="" class="pagina-header-roos" aria-hidden="true">
+  <img src="{{ '/assets/logo.svg' | relative_url }}" alt="" class="pagina-header-roos" aria-hidden="true">
   <div class="container pagina-header-binnen">
     <p class="sectie-label sectie-label--rood">Actueel</p>
     <h1>Nieuws</h1>
-    <p>Het laatste nieuws en persberichten van Progressief Baarn over lokale politiek, standpunten en activiteiten.</p>
+    <p>Het laatste nieuws en persberichten van Sociaal Democraten Baarn over lokale politiek, standpunten en activiteiten in Baarn.</p>
   </div>
 </header>
 
@@ -28,17 +28,16 @@ description: Het laatste nieuws en persberichten van Progressief Baarn over loka
       {% for artikel in site.data.nieuws %}
       <article class="nieuws-kaart" data-categorie="{{ artikel.categorie }}">
         <div class="nieuws-kaart-afbeelding" style="background: linear-gradient(135deg,
-          {% if artikel.kleur == 'groen' %}var(--groen-bg), var(--groen-kaart)
-          {% elsif artikel.kleur == 'rood' %}var(--roze-bg), var(--roze-kaart)
-          {% else %}var(--licht), var(--rand){% endif %});">{{ artikel.icoon }}</div>
+          {% if artikel.kleur == 'rood' %}var(--rood-bg), var(--rood-kaart)
+          {% else %}var(--grijs-bg), var(--grijs-kaart){% endif %});">{{ artikel.icoon }}</div>
         <div class="nieuws-kaart-body">
           <div class="nieuws-meta">
-            <span class="nieuws-tag nieuws-tag--{{ artikel.kleur }}">{{ artikel.categorie | capitalize }}</span>
+            <span class="nieuws-tag nieuws-tag--{% if artikel.kleur == 'rood' %}rood{% else %}donker{% endif %}">{{ artikel.categorie | capitalize }}</span>
             <span class="nieuws-datum">{{ artikel.datum | date: "%-d %B %Y" }}</span>
           </div>
           <h3>{{ artikel.titel }}</h3>
           <p>{{ artikel.intro | truncatewords: 30 }}</p>
-          <a href="{{ artikel.url }}" class="nieuws-link">Lees meer →</a>
+          <a href="{{ artikel.url }}" class="nieuws-link" target="_blank" rel="noopener">Lees meer →</a>
         </div>
       </article>
       {% endfor %}
